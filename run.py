@@ -39,7 +39,7 @@ def get_random_color():
 
 def ask_user_to_play_or_not():
     """
-    The function is to let user decide 
+    The function is to let user decide,
     if he/she plays the game or not.
     print out the messages base on user's answer.
     """
@@ -70,6 +70,15 @@ def get_user_name():
     Display welcoming message to the user.
     """
 
+    while True:
+
+        user_name = input('Please enter your name: \n')
+
+        if user_name.isalpha():
+
+            print()
+            print('Nice to meet you  ' + user_name + '!')
+            
 
 def play_game():
     """
@@ -92,5 +101,6 @@ def main():
     """
     get_random_color()
     ask_user_to_play_or_not()
+    get_user_name()
 
 main()
