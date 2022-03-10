@@ -5,6 +5,8 @@ import random
 # The random number is chosen by the computer.
 
 
+
+
 def get_random_number():
     """
     The function is to get random number.
@@ -96,21 +98,12 @@ def get_user_name():
 
 # validate_user_answer()
 
-
-
-            
-
 def play_game():
     """
     The function is to play the game.
     User guess a number each time.
     User gets a hint after each guessing.
-
     """
-
-    attempts = 0
-    max_attempts = 10
-
     answer = random.randint(0, 50)
    
     while True:
@@ -137,7 +130,7 @@ def play_game():
                 print()
                 print('You won! The answer is', answer, '.')
                 print('You guessed correctly in', attempts, 'attempts.')
-                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
                 break
 
@@ -149,17 +142,83 @@ def play_game():
 
 
 
-
-    
-
-
-# play_game()
-
-def hangman_image():
+def hangman_image(attempts):
     """
     The function is to print out the Hangman
     on each time user guesses a wrong letter.
     """
+
+    attempts = 0
+    max_attempts = 7
+
+    lives = [
+        """
+        |------->
+        |     |  
+        |
+        |
+        |
+        |
+        ~~~~~~~~~~~
+        """, 
+        """
+        |------->
+        |     |
+        |     O
+        |
+        |
+        |
+        ~~~~~~~~~~~
+        """,
+        """
+        |------->
+        |     |
+        |     O
+        |     |
+        |
+        |
+        ~~~~~~~~~~~
+        """,
+        """
+        |------->
+        |     |
+        |     O
+        |     |\
+        |
+        |
+        ~~~~~~~~~~~
+        """,
+        """
+        |------->
+        |     |
+        |     O
+        |    /|\
+        |
+        |
+        ~~~~~~~~~~~
+        """,
+        """
+        |------->
+        |     |
+        |     O
+        |    /|\
+        |      \
+        |
+        ~~~~~~~~~~~
+        """,
+        """
+        |------->
+        |     |
+        |     O
+        |    /|\
+        |    / \
+        |
+        ~~~~~~~~~~~
+        """
+    ]
+
+    
+        
 
 
 def main():
