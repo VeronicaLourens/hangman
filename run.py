@@ -87,7 +87,7 @@ def play_game():
                 print()
 
                 max_attempts -=1
-                print(hangman_image(attempts))
+                print(print_hangman(attempts))
                 continue
 
             elif user_answer < answer:
@@ -97,7 +97,7 @@ def play_game():
                 print()
 
                 max_attempts -=1
-                print(hangman_image(attempts))
+                print(print_hangman(attempts))
 
             else:
                 print()
@@ -114,7 +114,7 @@ def play_game():
             print()
 
 
-    print(hangman_image(attempts))
+    print(print_hangman(attempts))
 
 
 
@@ -124,83 +124,80 @@ def print_hangman(attempts):
     on each time user guesses a wrong number.
     """
 
-    lives = [
-        """
-        |------->
-        |     |  
-        |
-        |
-        |
-        |
-        |
-        ~~~~~~~~~~~
-        """, 
-        """
-        |------->
-        |     |
-        |     O
-        |
-        |
-        |
-        |
-        ~~~~~~~~~~~
-        """,
-        """
-        |------->
-        |     |
-        |     O
-        |     |
-        |
-        |
-        |
-        ~~~~~~~~~~~
-        """,
-        """
-        |------->
-        |     |
-        |     O
-        |     |\
-        |
-        |
-        |
-        ~~~~~~~~~~~
-        """,
-        """
-        |------->
-        |     |
-        |     O
-        |    /|\
-        |
-        |
-        |
-        ~~~~~~~~~~~
-        """,
-        """
-        |------->
-        |     |
-        |     O
-        |    /|\
-        |      \
-        |
-        |
-        ~~~~~~~~~~~
-        """,
-        """
-        |------->
-        |     |
-        |     O
-        |    /|\
-        |    / \
-        |
-        |
-        ~~~~~~~~~~~
-        """
-    ]
+    if(attempts == 0):
+        print('\n*----*')
+        print('     |')
+        print('     |')
+        print('     |')
+        print('     |')
+        print('     |')
+        print('   ====')
 
-    return lives[attempts]
+    elif(attempts == 1):
+        print('\n*----*')
+        print(' |   |')
+        print('     |')
+        print('     |')
+        print('     |')
+        print('     |')
+        print('   ====')
 
-    
+    elif(attempts == 2):
+        print('\n*----*')
+        print(' |   |')
+        print(' O   |')
+        print('     |')
+        print('     |')
+        print('     |')
+        print('   ====')
+
+    elif(attempts == 3):
+        print('\n*----*')
+        print(' |   |')
+        print(' O   |')
+        print(' |   |')
+        print('     |')
+        print('     |')
+        print('   ====')
+
+    elif(attempts == 4):
+        print('\n*----*')
+        print(' |   |')
+        print(' O   |')
+        print('/|   |')
+        print('     |')
+        print('     |')
+        print('   ====')
+
+    elif(attempts == 5):
+        print('\n*----*')
+        print(' |   |')
+        print(' O   |')
+        print('/|\  |')
+        print('     |')
+        print('     |')
+        print('   ====')
+
+    elif(attempts == 6):
+        print('\n*----*')
+        print(' |   |')
+        print(' O   |')
+        print('/|\  |')
+        print('/    |')
+        print('     |')
+        print('   ====')
+
+    elif(attempts == 7):
+        print('\n*----*')
+        print(' |   |')
+        print(' O   |')
+        print('/|\  |')
+        print('/ \  |')
+        print('     |')
+        print('   ====')
         
+    
+    
 
 
 def main():
