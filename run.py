@@ -4,9 +4,6 @@ import random
 # User guess a number each time between 0 and 50.
 # The random number is chosen by the computer.
 
-
-
-
 def get_random_number():
     """
     The function is to get random number.
@@ -46,7 +43,6 @@ def ask_user_to_play_or_not():
             continue
             
 
-
 def get_user_name():
     """
     The function is to get user's name.
@@ -64,49 +60,20 @@ def get_user_name():
 
             break
 
-
-# get_user_name()
-
-# def validate_user_answer():
-#     """
-#     The function is to validate user's answer,
-#     to see if user enters a digit.
-#     """
-
-#     gameIsPlaying = True
-
-#     while gameIsPlaying:
-        # try:
-        #user_answer = input('Please guess a number between 0 and 50: ')
-
-        # except ValueError():
-        #     print('Invalid data. Please enter a number: ')
-       
-
-        # if user_answer.isdigit():
-           
-        #     user_answer = int(user_answer)
-        #     gameIsPlaying = False
-            
-        #     if user_answer <= 0:
-        #         print('Please enter a number bigger than 0: ')
-
-        # else: 
-        #     print('Please enter only numbers next time.')
-        #     print()
-        #     continue
-
-# validate_user_answer()
-
 def play_game():
     """
     The function is to play the game.
     User guess a number each time.
     User gets a hint after each guessing.
     """
+
+    attempts = 0
+    max_attempts = 6
+    isPlaying = False
+
     answer = random.randint(0, 50)
    
-    while True:
+    while not isPlaying and max_attempts > 0:
         attempts +=1
         user_answer = input('Please guess a number between 0 and 50: ')
 
@@ -118,6 +85,9 @@ def play_game():
                 print('Your number is too big. Please try again!')
                 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
+
+                max_attempts -=1
+                print(hangman_image(attempts))
                 continue
 
             elif user_answer < answer:
@@ -125,6 +95,9 @@ def play_game():
                 print('Your number is too small. Please try again!')
                 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
+
+                max_attempts -=1
+                print(hangman_image(attempts))
 
             else:
                 print()
@@ -141,20 +114,21 @@ def play_game():
             print()
 
 
+    print(hangman_image(attempts))
 
-def hangman_image(attempts):
+
+
+def print_hangman(attempts):
     """
     The function is to print out the Hangman
-    on each time user guesses a wrong letter.
+    on each time user guesses a wrong number.
     """
-
-    attempts = 0
-    max_attempts = 7
 
     lives = [
         """
         |------->
         |     |  
+        |
         |
         |
         |
@@ -168,6 +142,7 @@ def hangman_image(attempts):
         |
         |
         |
+        |
         ~~~~~~~~~~~
         """,
         """
@@ -175,6 +150,7 @@ def hangman_image(attempts):
         |     |
         |     O
         |     |
+        |
         |
         |
         ~~~~~~~~~~~
@@ -186,6 +162,7 @@ def hangman_image(attempts):
         |     |\
         |
         |
+        |
         ~~~~~~~~~~~
         """,
         """
@@ -193,6 +170,7 @@ def hangman_image(attempts):
         |     |
         |     O
         |    /|\
+        |
         |
         |
         ~~~~~~~~~~~
@@ -204,6 +182,7 @@ def hangman_image(attempts):
         |    /|\
         |      \
         |
+        |
         ~~~~~~~~~~~
         """,
         """
@@ -213,9 +192,12 @@ def hangman_image(attempts):
         |    /|\
         |    / \
         |
+        |
         ~~~~~~~~~~~
         """
     ]
+
+    return lives[attempts]
 
     
         
@@ -228,7 +210,7 @@ def main():
     get_random_number()
     ask_user_to_play_or_not()
     get_user_name()
-    # validate_user_answer()
     play_game()
+    print_hangman(attempts)
 
 main()
