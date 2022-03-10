@@ -70,25 +70,31 @@ def validate_user_answer():
     to see if user enters a digit.
     """
 
-    while True:
+    gameIsPlaying = True
+
+    while gameIsPlaying:
         # try:
-        #     user_answer = input('Please guess a number between 0 and 50: ')
+        user_answer = input('Please guess a number between 0 and 50: ')
 
         # except ValueError():
         #     print('Invalid data. Please enter a number: ')
        
 
         if user_answer.isdigit():
+           
             user_answer = int(user_answer)
-
-        # elif user_answer <= 0:
-        #     print('Please enter a number bigger than 0: ')
+            gameIsPlaying = False
+            
+            if user_answer <= 0:
+                print('Please enter a number bigger than 0: ')
 
         else: 
             print('Please enter only numbers next time.')
             print()
+            continue
 
-# validate_user_answer()
+validate_user_answer()
+
 
 
             
@@ -105,18 +111,28 @@ def play_game():
     max_attempts = 10
 
     answer = random.randint(0, 50)
-    user_answer = input('Please guess a number: ')
+   
+    
+    
 
-    while user_answer != answer:
-        if user_answer > answer:
-            print('Your number is too big. Please try again!')
+    while True:
+        attempts +=1
+        user_answer = input('Please guess a number between 0 and 50: ')
 
-        elif user_answer < answer:
-            print('Your number is too small. Please try again!')
+        if user_answer.isdigit():
+            user_answer = int(user_answer)
 
+            if user_answer > answer:
+                print('Your number is too big. Please try again!')
+                continue
 
+            elif user_answer < answer:
+                print('Your number is too small. Please try again!')
 
-play_game()
+            else:
+                print('You won! The answer is', answer, '.')
+                print('You guessed correctly in', attempts, 'attempts.')
+                break
 
 
 
@@ -141,5 +157,6 @@ def main():
     ask_user_to_play_or_not()
     username = get_user_name()
     user_answer = validate_user_answer()
+    play_game()
 
-# main()
+main()
