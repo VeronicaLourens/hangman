@@ -1,7 +1,7 @@
 import random
 
 # Hangman game is to guess a random number.
-# User guess a number each time between 1 and 50.
+# User guess a number each time between 0 and 50.
 # The random number is chosen by the computer.
 
 
@@ -28,7 +28,8 @@ def ask_user_to_play_or_not():
         if user_choice.lower() == 'yes':
             print("Great! Let's go ahead and play.")
             print()
-            break
+           # break
+            return True
             
 
         elif user_choice.lower() == 'no':
@@ -64,36 +65,36 @@ def get_user_name():
 
 # get_user_name()
 
-def validate_user_answer():
-    """
-    The function is to validate user's answer,
-    to see if user enters a digit.
-    """
+# def validate_user_answer():
+#     """
+#     The function is to validate user's answer,
+#     to see if user enters a digit.
+#     """
 
-    gameIsPlaying = True
+#     gameIsPlaying = True
 
-    while gameIsPlaying:
+#     while gameIsPlaying:
         # try:
-        user_answer = input('Please guess a number between 0 and 50: ')
+        #user_answer = input('Please guess a number between 0 and 50: ')
 
         # except ValueError():
         #     print('Invalid data. Please enter a number: ')
        
 
-        if user_answer.isdigit():
+        # if user_answer.isdigit():
            
-            user_answer = int(user_answer)
-            gameIsPlaying = False
+        #     user_answer = int(user_answer)
+        #     gameIsPlaying = False
             
-            if user_answer <= 0:
-                print('Please enter a number bigger than 0: ')
+        #     if user_answer <= 0:
+        #         print('Please enter a number bigger than 0: ')
 
-        else: 
-            print('Please enter only numbers next time.')
-            print()
-            continue
+        # else: 
+        #     print('Please enter only numbers next time.')
+        #     print()
+        #     continue
 
-validate_user_answer()
+# validate_user_answer()
 
 
 
@@ -112,9 +113,6 @@ def play_game():
 
     answer = random.randint(0, 50)
    
-    
-    
-
     while True:
         attempts +=1
         user_answer = input('Please guess a number between 0 and 50: ')
@@ -123,16 +121,31 @@ def play_game():
             user_answer = int(user_answer)
 
             if user_answer > answer:
+                print()
                 print('Your number is too big. Please try again!')
+                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                print()
                 continue
 
             elif user_answer < answer:
+                print()
                 print('Your number is too small. Please try again!')
+                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                print()
 
             else:
+                print()
                 print('You won! The answer is', answer, '.')
                 print('You guessed correctly in', attempts, 'attempts.')
+                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                print()
                 break
+
+        else:
+            print()
+            print('Invalid data. Please enter a number!')
+            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+            print()
 
 
 
@@ -153,10 +166,10 @@ def main():
     """
     The function is to call all of the functions.
     """
-    answer = get_random_number()
+    get_random_number()
     ask_user_to_play_or_not()
-    username = get_user_name()
-    user_answer = validate_user_answer()
+    get_user_name()
+    # validate_user_answer()
     play_game()
 
 main()
