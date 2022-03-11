@@ -148,76 +148,76 @@ def print_hangman(attempts):
     """
 
     if attempts == 0:
-        print('  \n*----*')
+        print('\n*------*')
         print('       |')
         print('       |')
         print('       |')
         print('       |')
         print('       |')
-        print('     ====')
+        print('=========')
 
     elif attempts == 1:
-        print('  \n*----*')
+        print('\n*------*')
         print('   |   |')
         print('       |')
         print('       |')
         print('       |')
         print('       |')
-        print('     ====')
+        print('========')
 
     elif attempts == 2:
-        print('  \n*----*')
+        print('\n*------*')
         print('   |   |')
         print('   O   |')
         print('       |')
         print('       |')
         print('       |')
-        print('     ====')
+        print('========')
 
     elif attempts == 3:
-        print('  \n*----*')
+        print('\n*------*')
         print('   |   |')
         print('   O   |')
         print('   |   |')
         print('       |')
         print('       |')
-        print('     ====')
+        print('========')
 
     elif attempts == 4:
-        print('  \n*----*')
+        print('\n*------*')
         print('   |   |')
         print('   O   |')
         print('  /|   |')
         print('       |')
         print('       |')
-        print('     ====')
+        print('========')
 
     elif attempts == 5:
-        print('  \n*----*')
+        print('\n*------*')
         print('   |   |')
         print('   O   |')
         print('  /|\  |')
         print('       |')
         print('       |')
-        print('     ====')
+        print('========')
 
     elif attempts == 6:
-        print('  \n*----*')
+        print('\n*------*')
         print('   |   |')
         print('   O   |')
         print('  /|\  |')
         print('  /    |')
         print('       |')
-        print('     ====')
+        print('========')
 
     elif attempts == 7:
-        print('  \n*----*')
+        print('\n*------*')
         print('   |   |')
         print('   O   |')
         print('  /|\  |')
         print('  / \  |')
         print('       |')
-        print('     ====')
+        print('========')
         print()
         print('********* Game over! *********')
         print()
