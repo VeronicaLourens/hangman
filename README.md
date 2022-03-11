@@ -1,6 +1,6 @@
 # Hangman Game
 
-Hangman game is a simple guessing Python terminal game that player guess a number each time. There is a hint that tells the player if the number guessed is too big or too small from the target. The player keeps guessing until guesses a correct number or until reaches the maximum attempts allowed.
+Hangman game is a simple guessing Python terminal game that user guesses a number each time. There is a hint that tells the user if the number guessed is too big or too small from the target. The user keeps guessing until guesses a correct number or until reaches the maximum attempts allowed.
 
 
 ## User Experience UX
@@ -8,8 +8,9 @@ Hangman game is a simple guessing Python terminal game that player guess a numbe
  ### User Stories
 
  * As a first time user, I want the game to be easily accessible.
- * As a first time user, I want to know what the game rules are and how to play the game.
+ * As a first time user, I want to know how to play the game.
  * As a game user, I want to know the game result.
+ * As a game user, I want to be able to continuesly play the game as I wish.
 
 [Back to top](#hangman-game)
 
@@ -44,7 +45,26 @@ The game is built using Python only.
 
 ## Testing
 
+## Libraries
+
+The ```random``` module is imported to generate a random number for the project.
+
 ## Deployment
+
+### Deploy the project to Heroku
+
+  1. Log in to my personal Heroku account page, select ```Create new app```, give a name to the new app, choose a ```region``` from the drop down list to```Europe```. Then click ```Create app```.
+  
+  2. Go to the ```Settings``` tab afterwards, click ```Add buildpack``` button on the right side of the ```Buildpacks section```, first select ```python``` and add it, then select ```nodejs``` and add it.
+
+
+  3. Go to the ```Deploy``` tab, click ```GitHub``` in the ```Deployment method``` section, search for the repo on GitHub, click ```Connect```. 
+  4. In the ```Manual deploy```section, seclect ```main``` and then click ```Deploy Branch``` button, the app was successfully deployed after a while. 
+  5. Click the ```View``` button on the bottom of the page or the ```Open app``` button on the top right corner to view the programme.
+
+
+
+
 
 ## Credit
 
