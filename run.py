@@ -5,7 +5,7 @@ Import random module to get the random number.
 import random
 
 # Hangman game is to guess a random number.
-# User guess a number each time between 0 and 50.
+# User guesses a number each time between 0 and 50.
 # The random number is chosen by the computer.
 
 def ask_user_to_play_or_not():
@@ -45,7 +45,7 @@ def ask_user_to_play_or_not():
 def get_user_name():
     """
     The function is to get user's name.
-    Display welcoming message to the user.
+    Displays welcoming message to the user.
     """
 
     while True:
@@ -55,16 +55,16 @@ def get_user_name():
         if user_name.isalpha():
 
             print()
-            print('Nice to meet you  ' + user_name + '!')
+            print('***** Nice to meet you  ' + user_name + '! *****')
 
             break
 
 def play_game():
     """
     The function is to play the game.
-    User guess a number each time.
+    User guesses a number each time.
     User gets a hint after each guessing.
-    Print hangman on each wrong answer.
+    Prints hangman on each wrong answer.
     """
 
     attempts = 0
@@ -74,6 +74,7 @@ def play_game():
     answer = random.randint(0, 50)
    
     while not is_playing and max_attempts > 0:
+
         attempts += 1
         user_answer = input('Please guess a number between 0 and 50: ')
 
@@ -89,7 +90,6 @@ def play_game():
                 max_attempts -= 1
 
                 print(print_hangman(attempts))
-                # print(hangman)
                 continue
 
             elif user_answer < answer:
@@ -101,26 +101,27 @@ def play_game():
                 max_attempts -= 1
 
                 print(print_hangman(attempts))
-                # print(hangman)
 
             else:
                 print()
                 print('*********** Congratulations! ***********')
                 print()
                 print('          You  WON  the  game!     ')
+                print()
                 print('      Great job! The answer is', answer, '.')
                 print('   You guessed correctly in', attempts, 'attempts.')
-                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
 
 
                 while True:
 
                     print('Would you like to play again?')
+                    print()
                     play_again = input("Please enter 'yes' or 'no': \n")
 
                     if play_again.lower() == 'yes':
-
+                        print()
                         play_game()
 
                     elif play_again.lower() == 'no':
@@ -217,10 +218,14 @@ def print_hangman(attempts):
         print('/ \  |')
         print('     |')
         print('   ====')
-        print('Ooopsie...Game over!')
-        print('You lost the game!')
-        print('Please try again next time!')
-        print('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        print()
+        print('******* Game over! *******')
+        print()
+        print('      Ooopsie-daisy..'      )
+        print('    You lost the game!')
+        print('  Please try again next time!'  )
+        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        print()
 
 
         while True:
@@ -233,8 +238,9 @@ def print_hangman(attempts):
 
             elif play_again.lower() == 'no':
                 print()
-                print('~~~~~ Thank you for playing! ~~~~~')
-                print('~~~~~ See you next time. ~~~~~')
+                print('**** Thank you for playing! ****')
+                print()
+                print('****** See you next time. ******')
                 quit()
 
 def main():
@@ -243,19 +249,17 @@ def main():
     """
 
     attempts = 7
-    # get_random_number()
     ask_user_to_play_or_not()
     get_user_name()
-    # game = play_game()
     play_game()
     print_hangman(attempts)
-    # hangman = print_hangman(attempts)
+   
 
-print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+print('******************************')
 print()
-print('Welcome to the Hangman Game.')
+print('   Welcome to Hangman Game!   ')
 print()
-print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+print('******************************')
 
 
 main()
