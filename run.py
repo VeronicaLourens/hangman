@@ -8,6 +8,7 @@ import random
 # User guesses a number each time between 0 and 50.
 # The random number is chosen by the computer.
 
+
 def ask_user_to_play_or_not():
     """
     The function is to let user decide to play or not.
@@ -17,30 +18,31 @@ def ask_user_to_play_or_not():
     while True:
 
         print()
-        print('Would you like to play Hangman game?')
-        user_choice = input("Please enter 'yes' or 'no': ")
+        print(' Would you like to play Hangman game?')
+        user_choice = input(" Please enter 'yes' or 'no': ")
         print('\n')
 
         if user_choice.lower() == 'yes':
-            print("Great! Let's go ahead and play.")
+            print(" Great! Let's go ahead and play.")
             print()
             return True
 
         elif user_choice.lower() == 'no':
             print()
-            print('No worries! Until next time.')
+            print(' No worries! Until next time.')
             print('============================')
             print()
             quit()
 
         else:
             print()
-            print('Invalid data.')
-            print("Please enter 'yes' or 'no' next time.")
+            print(' Invalid data.')
+            print(" Please enter 'yes' or 'no' next time.")
             print('=====================================')
             print()
-            continue
-            
+
+            continue         
+
 
 def get_user_name():
     """
@@ -50,14 +52,15 @@ def get_user_name():
 
     while True:
 
-        user_name = input('Please enter your name: \n')
+        user_name = input(' Please enter your name: \n')
 
         if user_name.isalpha():
 
             print()
-            print('***** Nice to meet you  ' + user_name + '! *****')
+            print(' ***** Nice to meet you  ' + user_name + '! *****')
 
             break
+
 
 def play_game():
     """
@@ -76,14 +79,14 @@ def play_game():
     while not is_playing and max_attempts > 0:
 
         attempts += 1
-        user_answer = input('Please guess a number between 0 and 50: ')
+        user_answer = input(' Please guess a number between 0 and 50: ')
 
         if user_answer.isdigit():
             user_answer = int(user_answer)
 
             if user_answer > answer:
                 print()
-                print('Your number is too big. Please try again!')
+                print(' Your number is too big. Please try again!')
                 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
@@ -94,7 +97,7 @@ def play_game():
 
             elif user_answer < answer:
                 print()
-                print('Your number is too small. Please try again!')
+                print(' Your number is too small. Please try again!')
                 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
@@ -113,12 +116,10 @@ def play_game():
                 print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
 
-
                 while True:
-
-                    print('Would you like to play again?')
+                    print(' Would you like to play again?')
                     print()
-                    play_again = input("Please enter 'yes' or 'no': \n")
+                    play_again = input(" Please enter 'yes' or 'no': \n")
 
                     if play_again.lower() == 'yes':
                         print()
@@ -131,11 +132,10 @@ def play_game():
                         print('==============================')
                         quit()
 
-                break
-                
+                break             
         else:
             print()
-            print('Invalid data. Please enter a number!')
+            print(' Invalid data. Please enter a number!')
             print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
             print()
 
@@ -221,19 +221,16 @@ def print_hangman(attempts):
         print()
         print('******* Game over! *******')
         print()
-        print('      Ooopsie-daisy..'      )
+        print('      Ooopsie-daisy...    ')
         print('    You lost the game!')
-        print('  Please try again next time!'  )
+        print('  Please try again next time! ')
         print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
         print()
 
-
         while True:
-
-            play_again = input('Would you like to play again? \n')
+            play_again = input(' Would you like to play again? \n')
 
             if play_again.lower() == 'yes':
-
                 play_game()
 
             elif play_again.lower() == 'no':
@@ -242,6 +239,7 @@ def print_hangman(attempts):
                 print()
                 print('****** See you next time. ******')
                 quit()
+
 
 def main():
     """
