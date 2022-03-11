@@ -128,6 +128,7 @@ def play_game():
                     elif play_again.lower() == 'no':
                         print()
                         print('***** Thank you for playing! *****')
+                        print()
                         print('        See you next time.')
                         print('==================================')
                         quit()
@@ -229,6 +230,7 @@ def print_hangman(attempts):
 
         while True:
             play_again = input('     Would you like to play again? \n')
+            print("      Please enter 'yes' or 'no': \n")
 
             if play_again.lower() == 'yes':
                 play_game()
@@ -251,7 +253,8 @@ def main():
     get_user_name()
     play_game()
     print_hangman(attempts)
-   
+
+
 print()
 print()
 print('*******************************************')
