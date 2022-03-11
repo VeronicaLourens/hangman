@@ -18,27 +18,27 @@ def ask_user_to_play_or_not():
     while True:
 
         print()
-        print(' Would you like to play Hangman game?')
-        user_choice = input(" Please enter 'yes' or 'no': ")
+        print('     Would you like to play Hangman game?')
+        user_choice = input("     Please enter 'yes' or 'no': ")
         print('\n')
 
         if user_choice.lower() == 'yes':
-            print(" Great! Let's go ahead and play.")
+            print("     Great! Let's go ahead and play.")
             print()
             return True
 
         elif user_choice.lower() == 'no':
             print()
-            print(' No worries! Until next time.')
-            print('============================')
+            print('     No worries! Until next time.')
+            print('=====================================')
             print()
             quit()
 
         else:
             print()
-            print(' Invalid data.')
-            print(" Please enter 'yes' or 'no' next time.")
-            print('=====================================')
+            print('     Invalid data.')
+            print("     Please enter 'yes' or 'no' next time.")
+            print('==============================================')
             print()
 
             continue         
@@ -52,12 +52,12 @@ def get_user_name():
 
     while True:
 
-        user_name = input(' Please enter your name: \n')
+        user_name = input('     Please enter your name: \n')
 
         if user_name.isalpha():
 
             print()
-            print(' ***** Nice to meet you  ' + user_name + '! *****')
+            print('     ***** Nice to meet you  ' + user_name + '! *****')
 
             break
 
@@ -79,15 +79,15 @@ def play_game():
     while not is_playing and max_attempts > 0:
 
         attempts += 1
-        user_answer = input(' Please guess a number between 0 and 50: ')
+        user_answer = input('     Please guess a number between 0 and 50: ')
 
         if user_answer.isdigit():
             user_answer = int(user_answer)
 
             if user_answer > answer:
                 print()
-                print(' Your number is too big. Please try again!')
-                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                print('     Your number is too big. Please try again!')
+                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
                 max_attempts -= 1
@@ -97,8 +97,8 @@ def play_game():
 
             elif user_answer < answer:
                 print()
-                print(' Your number is too small. Please try again!')
-                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                print('     Your number is too small. Please try again!')
+                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
                 max_attempts -= 1
@@ -107,19 +107,19 @@ def play_game():
 
             else:
                 print()
-                print('*********** Congratulations! ***********')
+                print('************* Congratulations! *************')
                 print()
-                print('          You  WON  the  game!     ')
+                print('            You  WON  the  game!     ')
                 print()
-                print('      Great job! The answer is', answer, '.')
-                print('   You guessed correctly in', attempts, 'attempts.')
-                print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+                print('        Great job! The answer is', answer, '.')
+                print('     You guessed correctly in', attempts, 'attempts.')
+                print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
 
                 while True:
-                    print(' Would you like to play again?')
+                    print('     Would you like to play again?')
                     print()
-                    play_again = input(" Please enter 'yes' or 'no': \n")
+                    play_again = input("     Please enter 'yes' or 'no': \n")
 
                     if play_again.lower() == 'yes':
                         print()
@@ -127,16 +127,16 @@ def play_game():
 
                     elif play_again.lower() == 'no':
                         print()
-                        print('*** Thank you for playing! ***')
-                        print('      See you next time.')
-                        print('==============================')
+                        print('***** Thank you for playing! *****')
+                        print('        See you next time.')
+                        print('==================================')
                         quit()
 
                 break             
         else:
             print()
-            print(' Invalid data. Please enter a number!')
-            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+            print('     Invalid data. Please enter a number!')
+            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
             print()
 
 
@@ -148,96 +148,96 @@ def print_hangman(attempts):
     """
 
     if attempts == 0:
-        print('\n*----*')
-        print('     |')
-        print('     |')
-        print('     |')
-        print('     |')
-        print('     |')
-        print('   ====')
+        print('  \n*----*')
+        print('       |')
+        print('       |')
+        print('       |')
+        print('       |')
+        print('       |')
+        print('     ====')
 
     elif attempts == 1:
-        print('\n*----*')
-        print(' |   |')
-        print('     |')
-        print('     |')
-        print('     |')
-        print('     |')
-        print('   ====')
+        print('  \n*----*')
+        print('   |   |')
+        print('       |')
+        print('       |')
+        print('       |')
+        print('       |')
+        print('     ====')
 
     elif attempts == 2:
-        print('\n*----*')
-        print(' |   |')
-        print(' O   |')
-        print('     |')
-        print('     |')
-        print('     |')
-        print('   ====')
+        print('  \n*----*')
+        print('   |   |')
+        print('   O   |')
+        print('       |')
+        print('       |')
+        print('       |')
+        print('     ====')
 
     elif attempts == 3:
-        print('\n*----*')
-        print(' |   |')
-        print(' O   |')
-        print(' |   |')
-        print('     |')
-        print('     |')
-        print('   ====')
+        print('  \n*----*')
+        print('   |   |')
+        print('   O   |')
+        print('   |   |')
+        print('       |')
+        print('       |')
+        print('     ====')
 
     elif attempts == 4:
-        print('\n*----*')
-        print(' |   |')
-        print(' O   |')
-        print('/|   |')
-        print('     |')
-        print('     |')
-        print('   ====')
+        print('  \n*----*')
+        print('   |   |')
+        print('   O   |')
+        print('  /|   |')
+        print('       |')
+        print('       |')
+        print('     ====')
 
     elif attempts == 5:
-        print('\n*----*')
-        print(' |   |')
-        print(' O   |')
-        print('/|\  |')
-        print('     |')
-        print('     |')
-        print('   ====')
+        print('  \n*----*')
+        print('   |   |')
+        print('   O   |')
+        print('  /|\  |')
+        print('       |')
+        print('       |')
+        print('     ====')
 
     elif attempts == 6:
-        print('\n*----*')
-        print(' |   |')
-        print(' O   |')
-        print('/|\  |')
-        print('/    |')
-        print('     |')
-        print('   ====')
+        print('  \n*----*')
+        print('   |   |')
+        print('   O   |')
+        print('  /|\  |')
+        print('  /    |')
+        print('       |')
+        print('     ====')
 
     elif attempts == 7:
-        print('\n*----*')
-        print(' |   |')
-        print(' O   |')
-        print('/|\  |')
-        print('/ \  |')
-        print('     |')
-        print('   ====')
+        print('  \n*----*')
+        print('   |   |')
+        print('   O   |')
+        print('  /|\  |')
+        print('  / \  |')
+        print('       |')
+        print('     ====')
         print()
-        print('******* Game over! *******')
+        print('********* Game over! *********')
         print()
-        print('      Ooopsie-daisy...    ')
-        print('    You lost the game!')
-        print('  Please try again next time! ')
-        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        print('        Ooopsie-daisy...    ')
+        print('      You lost the game!')
+        print('    Please try again next time! ')
+        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
         print()
 
         while True:
-            play_again = input(' Would you like to play again? \n')
+            play_again = input('     Would you like to play again? \n')
 
             if play_again.lower() == 'yes':
                 play_game()
 
             elif play_again.lower() == 'no':
                 print()
-                print('**** Thank you for playing! ****')
+                print('****** Thank you for playing! ******')
                 print()
-                print('****** See you next time. ******')
+                print('******** See you next time. ********')
                 quit()
 
 
@@ -252,12 +252,13 @@ def main():
     play_game()
     print_hangman(attempts)
    
-
-print('******************************')
 print()
-print('   Welcome to Hangman Game!   ')
 print()
-print('******************************')
+print('*******************************************')
+print()
+print('          Welcome to Hangman Game!         ')
+print()
+print('*******************************************')
 
 
 main()
