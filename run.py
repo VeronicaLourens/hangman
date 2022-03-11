@@ -104,6 +104,7 @@ def play_game():
 
             else:
                 print()
+                print('Game over!')
                 print('Congratulations! You WON the game!')
                 print('The answer is', answer, '.')
                 print('You guessed correctly in', attempts, 'attempts.')
@@ -214,17 +215,26 @@ def print_hangman(attempts):
 def restart_game():
     """
     The function is to restart the game.
+    Ask user to decide to play again or not.
+    Calls the functions to re-run the game.
     """
     game_over = False
 
     while True:
-        play_again = input('Would you like to play again?')
+       
+        play_again = input('Would you like to play again? \n')
 
         if play_again.lower() == 'yes':
-            return True
+
+            continue
+
 
         else:
+            print('Thank you for playing!')
+            print('See you next time.')
             return False
+
+    play_game()
 
 
 def main():
