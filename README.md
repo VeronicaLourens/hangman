@@ -61,10 +61,14 @@ The ```random``` module is imported to generate a random number for the project.
   
   2. Go to the ```Settings``` tab afterwards, click ```Add buildpack``` button on the right side of the ```Buildpacks section```, first select ```python``` and add it, then select ```nodejs``` and add it.
 
+![Heroku](screenshots/heroku.jpg)
+
 
   3. Go to the ```Deploy``` tab, click ```GitHub``` in the ```Deployment method``` section, search for the repo on GitHub, click ```Connect```. 
   4. In the ```Manual deploy```section, seclect ```main``` and then click ```Deploy Branch``` button, the app was successfully deployed after a while. 
   5. Click the ```View``` button on the bottom of the page or the ```Open app``` button on the top right corner to view the programme.
+
+![Deployment](screenshots/deploy.jpg)
 
 
 
