@@ -7,7 +7,7 @@ import random
 
 # Import colorama to color the text.
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 colorama.init(autoreset=True)
 
 # Hangman game is to guess a random number.
@@ -113,12 +113,14 @@ def play_game():
 
             else:
                 print()
-                print(Back.LIGHTCYAN_EX + '       Congratulations!       ')
+                print(Fore.CYAN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
-                print(Fore.LIGHTYELLOW_EX + '            You  WON  the  game!')
+                print(Fore.LIGHTRED_EX + '   Congratulations!')
                 print()
-                print('        Great job! The answer is', answer, '.')
-                print('     You guessed correctly in', attempts, 'attempts.')
+                print(Fore.LIGHTYELLOW_EX + '   You  WON  the  game!')
+                print()
+                print('   Great job! The answer is', answer, '.')
+                print('   You guessed correctly in', attempts, 'attempts.')
                 print()
                 print(Fore.CYAN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
@@ -126,8 +128,8 @@ def play_game():
                 while True:
                     print()
                     print()
-                    print('     Would you like to play again?') 
-                    play_again = input("     Please enter 'yes' or 'no':  ")
+                    print('   Would you like to play again?') 
+                    play_again = input("   Please enter 'yes' or 'no':  ")
 
                     if play_again.lower() == 'yes':
                         print()
@@ -136,11 +138,11 @@ def play_game():
                     elif play_again.lower() == 'no':
                         print()
                         print()
-                        print(Fore.YELLOW + '          Thank you for playing!')
+                        print(Fore.YELLOW + '   Thank you for playing!')
                         print()
-                        print('            See you next time.')
+                        print('   See you next time.')
                         print()
-                        print(Fore.CYAN + '=================================')
+                        print(Fore.CYAN + '==================================')
                         print()
                         quit()
 
