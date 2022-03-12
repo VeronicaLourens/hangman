@@ -53,7 +53,7 @@ def get_user_name():
 
     while True:
 
-        user_name = input('     Please enter your name: \n')
+        user_name = input('     Please enter your name:  ')
 
         if user_name.isalpha():
 
@@ -110,7 +110,7 @@ def play_game():
                 print()
                 print(Fore.GREEN + '************* Congratulations! *************')
                 print()
-                print(Fore.LIGHTYELLOW_EX + Back.CYAN + '            You  WON  the  game!         ')
+                print(Fore.LIGHTYELLOW_EX + Back.CYAN + '            You  WON  the  game!           ')
                 print()
                 print('        Great job! The answer is', answer, '.')
                 print('     You guessed correctly in', attempts, 'attempts.')
@@ -122,7 +122,7 @@ def play_game():
                     print()
                     print('     Would you like to play again?')
                    
-                    play_again = input("     Please enter 'yes' or 'no': \n")
+                    play_again = input("     Please enter 'yes' or 'no':  ")
 
                     if play_again.lower() == 'yes':
                         print()
@@ -235,7 +235,7 @@ def print_hangman(attempts):
 
             print()
             print('      Would you like to play again?')
-            play_again = input("      Please enter 'yes' or 'no':  \n")
+            play_again = input("      Please enter 'yes' or 'no':  ")
            
 
             if play_again.lower() == 'yes':
