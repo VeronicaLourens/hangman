@@ -1,6 +1,11 @@
-# Import random module to get the random number.
+"""
+Import modules needed for the project.
+"""
 
+# Import random module to get the random number.
 import random
+
+# Import colorama to color the text.
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
@@ -19,27 +24,27 @@ def ask_user_to_play_or_not():
     while True:
 
         print()
-        print('     Would you like to play Hangman game?')
-        user_choice = input("     Please enter 'yes' or 'no': ")
+        print('   Would you like to play around?')
+        user_choice = input("   Please enter 'yes' or 'no': ")
         print('\n')
 
         if user_choice.lower() == 'yes':
-            print("     Great! Let's go ahead and play.")
+            print(Fore.LIGHTYELLOW_EX + "   Great! Let's go ahead and play.")
             print()
             return True
 
         elif user_choice.lower() == 'no':
             print()
-            print('     No worries! Until next time.')
-            print('=====================================')
+            print('   No worries! Until next time.')
+            print(Fore.LIGHTGREEN_EX + '====================================')
             print()
             quit()
 
         else:
             print()
-            print('     Invalid data.')
+            print(Fore.LIGHTBLUE_EX + '     Invalid data.')
             print("     Please enter 'yes' or 'no' next time.")
-            print('==============================================')
+            print(Fore.LIGHTYELLOW_EX + '====================================')
             print()
 
             continue         
@@ -53,12 +58,13 @@ def get_user_name():
 
     while True:
 
-        user_name = input('     Please enter your name:  ')
+        user_name = input('   Please enter your name:  ')
 
         if user_name.isalpha():
 
             print()
-            print(Fore.LIGHTGREEN_EX + '     ***** Nice to meet you  ' + user_name + '! *****')
+            print(Fore.GREEN + '   Nice to meet you  ' + user_name + '!')
+            print()
 
             break
 
@@ -76,18 +82,17 @@ def play_game():
     is_playing = False
 
     answer = random.randint(0, 50)
-   
     while not is_playing and max_attempts > 0:
 
         attempts += 1
-        user_answer = input('     Please guess a number between 0 and 50: ')
+        user_answer = input('   Please guess a number between 0 and 50: ')
 
         if user_answer.isdigit():
             user_answer = int(user_answer)
 
             if user_answer > answer:
                 print()
-                print(Fore.LIGHTRED_EX + '     Your number is too big. Please try again!')
+                print(Fore.LIGHTRED_EX + 'Your number is too big. Try again!')
                 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
@@ -98,7 +103,7 @@ def play_game():
 
             elif user_answer < answer:
                 print()
-                print(Fore.YELLOW + '     Your number is too small. Please try again!')
+                print(Fore.YELLOW + 'Your number is too small. Try again!')
                 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
@@ -108,20 +113,20 @@ def play_game():
 
             else:
                 print()
-                print(Fore.GREEN + '************* Congratulations! *************')
+                print(Back.LIGHTCYAN_EX + '       Congratulations!       ')
                 print()
-                print(Fore.LIGHTYELLOW_EX + Back.CYAN + '            You  WON  the  game!           ')
+                print(Fore.LIGHTYELLOW_EX + '            You  WON  the  game!')
                 print()
                 print('        Great job! The answer is', answer, '.')
                 print('     You guessed correctly in', attempts, 'attempts.')
-                print(Fore.GREEN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+                print()
+                print(Fore.CYAN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
 
                 while True:
                     print()
                     print()
-                    print('     Would you like to play again?')
-                   
+                    print('     Would you like to play again?') 
                     play_again = input("     Please enter 'yes' or 'no':  ")
 
                     if play_again.lower() == 'yes':
@@ -130,10 +135,13 @@ def play_game():
 
                     elif play_again.lower() == 'no':
                         print()
-                        print('***** Thank you for playing! *****')
                         print()
-                        print('        See you next time.')
-                        print('==================================')
+                        print(Fore.YELLOW + '          Thank you for playing!')
+                        print()
+                        print('            See you next time.')
+                        print()
+                        print(Fore.CYAN + '=================================')
+                        print()
                         quit()
 
                 break             
@@ -223,29 +231,29 @@ def print_hangman(attempts):
         print('       |')
         print('========')
         print()
-        print(Fore.LIGHTMAGENTA_EX + '******** G a m e  O v e r! ********')
+        print(Fore.LIGHTCYAN_EX + '******** G a m e  O v e r! ********')
         print()
         print('        Ooopsie-daisy...    ')
         print(Fore.LIGHTRED_EX + '      You lost the game!')
         print(Fore.YELLOW + '    Please try again next time! ')
-        print(Fore.LIGHTMAGENTA_EX + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        print()
+        print(Fore.LIGHTCYAN_EX + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
         print()
 
         while True:
 
             print()
-            print('      Would you like to play again?')
-            play_again = input("      Please enter 'yes' or 'no':  ")
-           
-
+            print('    Would you like to play again?')
+            play_again = input("    Please enter 'yes' or 'no':  ")         
             if play_again.lower() == 'yes':
                 play_game()
 
             elif play_again.lower() == 'no':
                 print()
-                print('****** Thank you for playing! ******')
+                print(Fore.LIGHTMAGENTA_EX + '      Thank you for playing!')
                 print()
-                print('******** See you next time. ********')
+                print(Fore.LIGHTYELLOW_EX + '         See you next time!')
+                print()
                 quit()
 
 
