@@ -45,6 +45,10 @@ The game is built using Python only.
 
 ## Testing
 
+### PEP8 online
+
+The code is tested on [PEP8 online](http://pep8online.com/)
+
 ## Libraries
 
 The ```random``` module is imported to generate a random number for the project.

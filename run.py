@@ -1,8 +1,9 @@
-"""
-Import random module to get the random number.
-"""
+# Import random module to get the random number.
 
 import random
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
 
 # Hangman game is to guess a random number.
 # User guesses a number each time between 0 and 50.
@@ -57,7 +58,7 @@ def get_user_name():
         if user_name.isalpha():
 
             print()
-            print('     ***** Nice to meet you  ' + user_name + '! *****')
+            print(Fore.LIGHTGREEN_EX + '     ***** Nice to meet you  ' + user_name + '! *****')
 
             break
 
@@ -86,7 +87,7 @@ def play_game():
 
             if user_answer > answer:
                 print()
-                print('     Your number is too big. Please try again!')
+                print(Fore.LIGHTRED_EX + '     Your number is too big. Please try again!')
                 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
@@ -97,7 +98,7 @@ def play_game():
 
             elif user_answer < answer:
                 print()
-                print('     Your number is too small. Please try again!')
+                print(Fore.YELLOW + '     Your number is too small. Please try again!')
                 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
@@ -107,18 +108,20 @@ def play_game():
 
             else:
                 print()
-                print('************* Congratulations! *************')
+                print(Fore.GREEN + '************* Congratulations! *************')
                 print()
-                print('            You  WON  the  game!     ')
+                print(Fore.LIGHTYELLOW_EX + Back.CYAN + '            You  WON  the  game!         ')
                 print()
                 print('        Great job! The answer is', answer, '.')
                 print('     You guessed correctly in', attempts, 'attempts.')
-                print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+                print(Fore.GREEN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
 
                 while True:
-                    print('     Would you like to play again?')
                     print()
+                    print()
+                    print('     Would you like to play again?')
+                   
                     play_again = input("     Please enter 'yes' or 'no': \n")
 
                     if play_again.lower() == 'yes':
@@ -220,17 +223,20 @@ def print_hangman(attempts):
         print('       |')
         print('========')
         print()
-        print('********* Game over! *********')
+        print(Fore.LIGHTMAGENTA_EX + '******** G a m e  O v e r! ********')
         print()
         print('        Ooopsie-daisy...    ')
-        print('      You lost the game!')
-        print('    Please try again next time! ')
-        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        print(Fore.LIGHTRED_EX + '      You lost the game!')
+        print(Fore.YELLOW + '    Please try again next time! ')
+        print(Fore.LIGHTMAGENTA_EX + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
         print()
 
         while True:
-            play_again = input('     Would you like to play again? \n')
-            print("      Please enter 'yes' or 'no': \n")
+
+            print()
+            print('      Would you like to play again?')
+            play_again = input("      Please enter 'yes' or 'no':  \n")
+           
 
             if play_again.lower() == 'yes':
                 play_game()
@@ -257,11 +263,11 @@ def main():
 
 print()
 print()
-print('*******************************************')
+print(Fore.LIGHTBLUE_EX + '*******************************************')
 print()
-print('          Welcome to Hangman Game!         ')
+print(Style.BRIGHT + '          Welcome to Hangman Game!         ')
 print()
-print('*******************************************')
+print(Fore. LIGHTBLUE_EX + '*******************************************')
 
 
 main()
