@@ -135,7 +135,7 @@ The ```random``` module and ```colorama``` module were imported to generate a ra
 
 
 
-
+[Back to top](#hangman-game)
 
 ## Credit
 

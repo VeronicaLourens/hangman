@@ -94,8 +94,9 @@ def play_game():
 
             if user_answer > answer:
                 print()
-                print(Fore.RED + '  Your number is too big. Try again!')
-                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                print(Fore.RED + '  Your number is too big.')
+                print(Fore.RED + '  Please try again!')
+                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
                 max_attempts -= 1
@@ -105,8 +106,9 @@ def play_game():
 
             elif user_answer < answer:
                 print()
-                print(Fore.YELLOW + '  Your number is too small. Try again!')
-                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+                print(Fore.YELLOW + '  Your number is too small!')
+                print(Fore.YELLOW + '  Please try again!')
+                print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
                 max_attempts -= 1
