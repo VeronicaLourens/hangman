@@ -35,16 +35,18 @@ def ask_user_to_play_or_not():
 
         elif user_choice.lower() == 'no':
             print()
-            print('   No worries! Until next time.')
-            print(Fore.LIGHTGREEN_EX + '====================================')
+            print(Fore.YELLOW + '   Thank you for stopping by.')
+            print()
+            print('   Have a great day! Bye-bye!')
+            print(Fore.LIGHTGREEN_EX + '=================================')
             print()
             quit()
 
         else:
             print()
-            print(Fore.LIGHTBLUE_EX + '     Invalid data.')
-            print("     Please enter 'yes' or 'no' next time.")
-            print(Fore.LIGHTYELLOW_EX + '====================================')
+            print(Fore.LIGHTRED_EX + '   Invalid data.')
+            print("   Please enter 'yes' or 'no' next time.")
+            print(Fore.YELLOW + '==========================================')
             print()
 
             continue         
@@ -115,7 +117,7 @@ def play_game():
                 print()
                 print(Fore.CYAN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
-                print(Fore.LIGHTRED_EX + '   Congratulations!')
+                print(Fore.LIGHTRED_EX + '   CONGRATULATIONS!')
                 print()
                 print(Fore.LIGHTYELLOW_EX + '   You  WON  the  game!')
                 print()
@@ -149,8 +151,8 @@ def play_game():
                 break             
         else:
             print()
-            print('     Invalid data. Please enter a number!')
-            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+            print(Fore.LIGHTRED_EX + '   Invalid data. Please enter a number!')
+            print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
             print()
 
 
@@ -246,7 +248,9 @@ def print_hangman(attempts):
 
             print()
             print('    Would you like to play again?')
-            play_again = input("    Please enter 'yes' or 'no':  ")         
+            play_again = input("    Please enter 'yes' or 'no':  ")
+            print()
+            print()       
             if play_again.lower() == 'yes':
                 play_game()
 
@@ -273,11 +277,19 @@ def main():
 
 print()
 print()
-print(Fore.LIGHTBLUE_EX + '*******************************************')
+print(Fore.LIGHTMAGENTA_EX + '*******************************************')
 print()
-print(Style.BRIGHT + '          Welcome to Hangman Game!         ')
+print(Style.BRIGHT + '          WELCOME TO HANGMAN GAME!')
 print()
-print(Fore. LIGHTBLUE_EX + '*******************************************')
+print(Fore. LIGHTMAGENTA_EX + '*******************************************')
+
+print('\n*------*   Game Rules:')
+print('   |   |')
+print(Fore.YELLOW + '   O   |   Follow the prompts.')
+print(Fore.LIGHTRED_EX + '  /|\  |   Guess a number between 0 and 50.')
+print(Fore.YELLOW + '  / \  |   A maximum 7 attempts is allowed.')
+print('       |')
+print('========   Happy playing!')
 
 
 main()
