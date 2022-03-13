@@ -35,7 +35,6 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
 [Back to top](#hangman-game)
 
-[Back to top](#hangman-game)
 
  ### Site Owner Stories
 
@@ -50,17 +49,26 @@ The game is built using Python and runs in Heroku. The Hangman game is to guess 
 
 ![Start screen](screenshots/start.png)
 
+[Back to top](#hangman-game)
+
 * The game exits if the user enters 'no'.
   
 ![Exit the game](screenshots/no.png)
+
+[Back to top](#hangman-game)
 
 * It asks for user's name afterwards if the user enters 'yes' and display a greeting message. Then it asks user to start guessing. It gives user hints about the range of numbers to be entered.
 
 ![Get user's name](screenshots/yes.png)
 
+
+[Back to top](#hangman-game)
+
 * It displays an invalid message if user enters neither 'yes' nor 'no'.
 
 ![Invalid message](screenshots/invalid.png)
+
+[Back to top](#hangman-game)
 
 
 * It prints one piece of Hangman body graphics on each time user enters a wrong number that either the number is too big or too small.
@@ -69,17 +77,26 @@ The game is built using Python and runs in Heroku. The Hangman game is to guess 
 
 ![Too big](screenshots/big.png)
 
+[Back to top](#hangman-game)
+
 * It displays a message of congratulatons if the user wins the game. and asks user if the user would like to play again or not. It the answer is 'yes', the game goes on.
 
 ![Winning message 1](screenshots/win-y.png)
+
+[Back to top](#hangman-game)
 
 * It displays a message of ```Thank you for playing!``` and ```See you next time.``` if user enters 'no'.
 
 ![Winning message 2](screenshots/win-n.png)
 
+[Back to top](#hangman-game)
+
+
 * It displays a lost message if the user loses the game. It prints out the Hangman graphics. It asks user to play again or not. The game restarts if the answer is 'yes'. 
 
 ![Lost game 1](screenshots/lost-y.png)
+
+[Back to top](#hangman-game)
 
 * The game exits if the answser is 'no'.
 
@@ -125,7 +142,13 @@ There were warnings about trailing whitespace during the code validation on ```P
 
 ## Libraries
 
-The ```random``` module and ```colorama``` module were imported to generate a random number and coloring the text for the project.
+* Random
+
+  The ```random``` module was imported to generate a random interger between 0 and 50 using ```randint``` method.
+
+* Colorama
+
+  The```colorama``` module was imported to color the text for the project.
 
 ## Deployment
 
@@ -136,6 +159,8 @@ The ```random``` module and ```colorama``` module were imported to generate a ra
   2. Go to the ```Settings``` tab afterwards, click ```Add buildpack``` button on the right side of the ```Buildpacks section```, first select ```python``` and add it, then select ```nodejs``` and add it.
 
 ![Heroku](screenshots/heroku.jpg)
+
+[Back to top](#hangman-game)
 
 
   3. Go to the ```Deploy``` tab, click ```GitHub``` in the ```Deployment method``` section, search for the repo on GitHub, click ```Connect```. 
