@@ -63,9 +63,11 @@ The game is built using Python and runs in Heroku. The Hangman game is to guess 
 ![Invalid message](screenshots/invalid.png)
 
 
-* It prints one piece of Hangman body graphics on each time user enters a wrong number.
+* It prints one piece of Hangman body graphics on each time user enters a wrong number that either the number is too big or too small.
 
 ![Too small](screenshots/sml.png)
+
+![Too big](screenshots/big.png)
 
 * It displays a message of congratulatons if the user wins the game. and asks user if the user would like to play again or not. It the answer is 'yes', the game goes on.
 
