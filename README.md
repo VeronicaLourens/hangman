@@ -20,6 +20,8 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
 * It asks user if user would like to play again after both win or lost the game. If user’s answer is ‘no’, then the program exits. If user’s answer is ‘yes’, then user can continue playing the game.
 
+[Back to top](#hangman-game)
+
 
 
 ## User Experience UX
@@ -30,6 +32,8 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
  * As a first time user, I want to know how to play the game.
  * As a game user, I want to know the game result.
  * As a game user, I want to be able to continuesly play the game as I wish.
+
+[Back to top](#hangman-game)
 
 [Back to top](#hangman-game)
 
@@ -92,13 +96,25 @@ The game is built using Python and runs in Heroku. The Hangman game is to guess 
 
 ## Testing
 
-### PEP8 online
+### PEP8 online code validation
+
+The game is manually tested via [PEP8](http://pep8online.com/)
+
+![PEP8](screenshots/pep8.png)
+
+[Back to top](#hangman-game)
+
+### Testing on Heroku
+
+The game is manually tested on the ***GitPod*** terminal and on the ***Heroku***. The program works well and confirms the error message when capturing invalid data.
 
 The code is tested on [PEP8 online](http://pep8online.com/)
 
+[Back to top](#hangman-game)
+
 ## Libraries
 
-The ```random``` module is imported to generate a random number for the project.
+The ```random``` module and ```colorama``` module were imported to generate a random number and coloring the text for the project.
 
 ## Deployment
 
