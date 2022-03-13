@@ -1,6 +1,12 @@
 # Hangman Game
 
+## Game Overview
+
 Hangman game is a simple guessing Python terminal game that user guesses a number each time. There is a hint that tells the user if the number guessed is too big or too small from the target. The user keeps guessing until guesses a correct number or until reaches the maximum attempts allowed.
+
+Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
+
+![Hangman Game](screenshots/screens.png)
 
 ## How To Play
 
@@ -33,21 +39,45 @@ Hangman game is a simple guessing Python terminal game that user guesses a numbe
 
 ## Existing Features
 
-The game is built using Python and runs in Heroku. This version of Hangman game is to guess a random number chosen by the computer. 
-
-### Start Screen
-It displays a welcoming message, a human graphic, a set of game rules on the start screen. It asks user to decide if user would like to play or not. 
+The game is built using Python and runs in Heroku. The Hangman game is to guess a random number chosen by the computer between 0 and 50.
 
 
+* It displays a welcoming message, a human graphic, a set of game rules on the start screen. It asks user to decide if user would like to play or not. 
 
-* It asks user if the user would like to play game or not.
+![Start screen](screenshots/start.png)
+
 * The game exits if the user enters 'no'.
-* It asks for user's name afterwards if the user enters 'yes.
-* It gives user hints about the range of numbers to be entered.
+  
+![Exit the game](screenshots/no.png)
+
+* It asks for user's name afterwards if the user enters 'yes' and display a greeting message. Then it asks user to start guessing. It gives user hints about the range of numbers to be entered.
+
+![Get user's name](screenshots/yes.png)
+
+* It displays an invalid message if user enters neither 'yes' nor 'no'.
+
+![Invalid message](screenshots/invalid.png)
+
+
 * It prints one piece of Hangman body graphics on each time user enters a wrong number.
-* It displays a win message if the user wins the game.
-* It displays a lost message if the user loses the game.
-* It asks user to play again or not. The game restarts if the answer is 'yes'. The game exits if the answser is 'no'.
+
+![Too small](screenshots/sml.png)
+
+* It displays a message of congratulatons if the user wins the game. and asks user if the user would like to play again or not. It the answer is 'yes', the game goes on.
+
+![Winning message 1](screenshots/win-y.png)
+
+* It displays a message of ```Thank you for playing!``` and ```See you next time.``` if user enters 'no'.
+
+![Winning message 2](screenshots/win-n.png)
+
+* It displays a lost message if the user loses the game. It prints out the Hangman graphics. It asks user to play again or not. The game restarts if the answer is 'yes'. 
+
+![Lost game 1](screenshots/lost-y.png)
+
+* The game exits if the answser is 'no'.
+
+![Lost game 2](screenshots/lost-n.png)
 
 
 [Back to top](#hangman-game)
