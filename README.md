@@ -145,11 +145,11 @@ There were warnings about trailing whitespace during the code validation on ```P
 
 ## Libraries
 
-* Random
+  ### Random
 
   The ```random``` module was imported to generate a random interger between 0 and 50 using ```randint``` method.
 
-* Colorama
+  ### Colorama
 
   The```colorama``` module was imported to color the text for the project.
 
