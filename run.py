@@ -29,7 +29,8 @@ def ask_user_to_play_or_not():
         print('\n')
 
         if user_choice.lower() == 'yes':
-            print(Fore.LIGHTYELLOW_EX + "  Great! Let's go ahead and play.")
+            print(Fore.LIGHTYELLOW_EX + "  Great!")
+            print(Fore.LIGHTYELLOW_EX + "  Let's go ahead and play!")
             print()
             return True
 
@@ -87,8 +88,9 @@ def play_game():
     while not is_playing and max_attempts > 0:
 
         attempts += 1
-        user_answer = input('  Please guess a number between 0 and 50: \n')
-
+        print('  Please guess a number.')
+        user_answer = input('  Between 0 and 50: ')
+        
         if user_answer.isdigit():
             user_answer = int(user_answer)
 
