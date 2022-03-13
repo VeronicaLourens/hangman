@@ -2,7 +2,7 @@
 
 ## Game Overview
 
-Hangman game is a simple guessing Python terminal game that user guesses a number each time. There is a hint that tells the user if the number guessed is too big or too small from the target. The user keeps guessing until guesses a correct number or until reaches the maximum attempts allowed.
+Hangman game is a simple guessing game that runs in Python. User guesses a number each time. There is a hint that tells the user if the number guessed is too big or too small from the target. The user keeps guessing until guesses a correct number or until reaches the maximum attempts allowed.
 
 Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
@@ -12,7 +12,7 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
 * This version of Hangman game is to guess a random number chosen by the computer. There is a welcoming message and the game rules on the start screen. It asks user to decide if user would like to play or not. If the answer is ‘no’, then the program exits. Otherwise, the game starts.
 
-* It asks user’s name, then displays a greeting message to the user. Following it gives user a hint about guessing a number from the range of between 0 and 50. 
+* It asks user’s name, then displays a greeting message to the user. Following it gives user a hint about guessing a number from the range of number between 0 and 50. 
 
 * User gets a message when the answer is incorrect. It gives user a hint that the number guessed is either too small or too big from the target number. Meanwhile, it prints out one part of the Hangman body graphics on each wrong answer. User keeps guessing the number until the answer is correct or reaches the maximum attempts allowed.
 
@@ -127,7 +127,7 @@ The ```random``` module is imported to generate a random number for the project.
 
 * The Hangman graphics are from [Shaun Halverson](https://www.youtube.com/watch?v=pFvSb7cb_Us) on [YouTube]().
   
-* I watched Python mini projects by [Tech With Tim](https://www.youtube.com/watch?v=DLn3jOsNRVE&t=1515s) on [YouTube]() to gain the extra knowledge for building the Hangman game.
+* I watched Python mini projects and how to import colorama module in Python by [Tech With Tim](https://www.youtube.com/watch?v=DLn3jOsNRVE&t=1515s) on [YouTube]() to gain the extra knowledge for building the Hangman game.
 
 [Back to top](#hangman-game)
 

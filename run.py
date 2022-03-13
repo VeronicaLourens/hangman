@@ -94,7 +94,7 @@ def play_game():
 
             if user_answer > answer:
                 print()
-                print(Fore.LIGHTRED_EX + '  Your number is too big. Try again!')
+                print(Fore.RED + '  Your number is too big. Try again!')
                 print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
                 print()
 
