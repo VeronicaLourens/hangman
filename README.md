@@ -109,7 +109,10 @@ The game is built using Python and runs in Heroku. The Hangman game is to guess 
 
 * [GitHub]() - to host the files and the content of the game.
 * [GitPod]() - to edit the code and push the code to GitHub page.
-* [Python]() - to create the code for the game.
+* [Python]() - to create the code for the game's functionalities.
+* [Am I Responsive]() - to generate the site's responsiveness preview image on the top of the README file.
+* [Heroku]() - to deploy and run the Hangman game.
+* [PEP8 online]() - to validate the Python code.
 
 [Back to top](#hangman-game)
 
