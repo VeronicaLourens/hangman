@@ -282,14 +282,15 @@ print()
 print(Style.BRIGHT + '          WELCOME TO HANGMAN GAME!')
 print()
 print(Fore. LIGHTMAGENTA_EX + '*******************************************')
-
 print('\n*------*   Game Rules:')
 print('   |   |')
-print(Fore.YELLOW + '   O   |   Follow the prompts.')
+print(Fore.LIGHTYELLOW_EX + '   O   |   Follow the prompts.')
 print(Fore.LIGHTRED_EX + '  /|\  |   Guess a number between 0 and 50.')
-print(Fore.YELLOW + '  / \  |   A maximum 7 attempts is allowed.')
+print(Fore.LIGHTYELLOW_EX + '  / \  |   A maximum 7 attempts is allowed.')
 print('       |')
 print('========   Happy playing!')
+print()
+print()
 
 
 main()

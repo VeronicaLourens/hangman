@@ -2,6 +2,19 @@
 
 Hangman game is a simple guessing Python terminal game that user guesses a number each time. There is a hint that tells the user if the number guessed is too big or too small from the target. The user keeps guessing until guesses a correct number or until reaches the maximum attempts allowed.
 
+## How To Play
+
+* This version of Hangman game is to guess a random number chosen by the computer. There is a welcoming message and the game rules on the start screen. It asks user to decide if user would like to play or not. If the answer is ‘no’, then the program exits. Otherwise, the game starts.
+
+* It asks user’s name, then displays a greeting message to the user. Following it gives user a hint about guessing a number from the range of between 0 and 50. 
+
+* User gets a message when the answer is incorrect. It gives user a hint that the number guessed is either too small or too big from the target number. Meanwhile, it prints out one part of the Hangman body graphics on each wrong answer. User keeps guessing the number until the answer is correct or reaches the maximum attempts allowed.
+
+* User gets a winning message of congratulations if user guesses the correct number. It also tells user what the answer is and how many attempts user guessed. User gets a lost message of telling user that the game is over. Meanwhile, it prints out the full graphics of the Hangman.
+
+* It asks user if user would like to play again after both win or lost the game. If user’s answer is ‘no’, then the program exits. If user’s answer is ‘yes’, then user can continue playing the game.
+
+
 
 ## User Experience UX
 
@@ -20,9 +33,13 @@ Hangman game is a simple guessing Python terminal game that user guesses a numbe
 
 ## Existing Features
 
-The game is built using Python only.
+The game is built using Python and runs in Heroku. This version of Hangman game is to guess a random number chosen by the computer. 
 
-* There is a welcome message on the start screen.
+### Start Screen
+It displays a welcoming message, a human graphic, a set of game rules on the start screen. It asks user to decide if user would like to play or not. 
+
+
+
 * It asks user if the user would like to play game or not.
 * The game exits if the user enters 'no'.
 * It asks for user's name afterwards if the user enters 'yes.
