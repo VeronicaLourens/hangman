@@ -49,7 +49,7 @@ def ask_user_to_play_or_not():
             print(Fore.YELLOW + '===============================')
             print()
 
-            continue         
+            continue
 
 
 def get_user_name():
@@ -132,7 +132,7 @@ def play_game():
                 while True:
                     print()
                     print()
-                    print('  Would you like to play again?') 
+                    print('  Would you like to play again?')
                     play_again = input("  Please enter 'yes' or 'no':  ")
 
                     if play_again.lower() == 'yes':
@@ -150,7 +150,7 @@ def play_game():
                         print()
                         quit()
 
-                break             
+                break
         else:
             print()
             print(Fore.LIGHTRED_EX + '  Invalid data.')
@@ -253,7 +253,7 @@ def print_hangman(attempts):
             print('   Would you like to play again?')
             play_again = input("   Please enter 'yes' or 'no':  ")
             print()
-            print()       
+            print()
             if play_again.lower() == 'yes':
                 play_game()
 

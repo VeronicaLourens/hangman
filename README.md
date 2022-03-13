@@ -10,7 +10,7 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
 ## How To Play
 
-* This version of Hangman game is to guess a random number chosen by the computer. There is a welcoming message and the game rules on the start screen. It asks user to decide if user would like to play or not. If the answer is ‘no’, then the program exits. Otherwise, the game starts.
+* This version of Hangman game is to guess a random number chosen by the computer. There is a welcoming message and the game info on the start screen. It asks user to decide if user would like to play or not. If the answer is ‘no’, then the program exits. Otherwise, the game starts.
 
 * It asks user’s name, then displays a greeting message to the user. Following it gives user a hint about guessing a number from the range of number between 0 and 50. 
 
@@ -100,9 +100,9 @@ The game is built using Python and runs in Heroku. The Hangman game is to guess 
 
 ### PEP8 online code validation
 
-The game is manually tested via [PEP8](http://pep8online.com/)
+The code of the program is manually tested via [PEP8](http://pep8online.com/) and no errors found.
 
-![PEP8](screenshots/pep8.png)
+![PEP8 final result](screenshots/pep8a.png)
 
 [Back to top](#hangman-game)
 
@@ -110,9 +110,18 @@ The game is manually tested via [PEP8](http://pep8online.com/)
 
 The game is manually tested on the ***GitPod*** terminal and on the ***Heroku***. The program works well and confirms the error message when capturing invalid data.
 
-The code is tested on [PEP8 online](http://pep8online.com/)
 
 [Back to top](#hangman-game)
+
+### Resolved Bug
+
+There were warnings about trailing whitespace during the code validation on ```PEP8 online```. I got a great tip on the ```Slack``` community and delete the whitespace using the ```Backspace``` key.
+
+![PEP8 first result](screenshots/pep8.png)
+
+
+[Back to top](#hangman-game)
+
 
 ## Libraries
 
