@@ -8,7 +8,33 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
 ![Hangman Game](screenshots/screens.png)
 
-
+Table of Contents
+  - [How To Play](#how-to-play)
+  - [User Experience UX](#user-experience-ux)
+    - [User Stories](#user-stories)
+    - [Site Owner Stories](#site-owner-stories)
+  - [Existing Features](#existing-features)
+    - [Start Screen](#start-screen)
+    - [Exit Screen](#exit-screen)
+    - [Greet User Screen](#greet-user-screen)
+    - [Invalid Data Screen](#invalid-data-screen)
+    - [Play Game Screen](#play-game-screen)
+    - [Winning Game Screen](#winning-game-screen)
+    - [Lost Game Screen](#lost-game-screen)
+  - [Technologies Used](#technologies-used)
+  - [Testing](#testing)
+    - [PEP8 online code validation](#pep8-online-code-validation)
+    - [Input Testing](#input-testing)
+    - [Terminal Testing](#terminal-testing)
+    - [Testing User Stories](#testing-user-stories)
+    - [Resolved Bug](#resolved-bug)
+  - [Libraries](#libraries)
+    - [Random](#random)
+    - [Colorama](#colorama)
+  - [Deployment](#deployment)
+    - [Deploy the project to Heroku](#deploy-the-project-to-heroku)
+  - [Credit](#credit)
+  - [Acknowledgement](#acknowledgement)
 
 
 ## How To Play
