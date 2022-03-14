@@ -139,8 +139,16 @@ I have tested the inputs during the project development.
 
 * It displays ```Invalid data``` and ```Please enter 'yes' or 'no' ``` when user enters something neither 'yes' nor 'no'.
   
+  ![Error2](screenshots/error2.png)
+  
 
 * It displays ```Invalid data``` and ```Please enter a number!``` when user enters letters rather than the numbers where it requires to enter a number.
+
+  ![Error1](screenshots/error1.png)
+
+### Play Game Testing
+
+I tested the game every time I wrote the functions during the project development in the ***Code Institute*** terminal template on Heroku. The program works well as intended.
 
 ### Testing on Heroku
 
