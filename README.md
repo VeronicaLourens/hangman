@@ -42,7 +42,7 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
 ## Existing Features
 
-The game is built using Python and runs in Heroku. The Hangman game is to guess a random number chosen by the computer between 0 and 50.
+The game is built using Python and runs in Heroku. The Hangman game is to guess a random number chosen by the computer between 0 and 50. User has maximum 7 attempts to guess.
 
 ### Start Screen
   It displays a welcoming message, a human graphic, game info on the start screen. It asks user to decide if user would like to play or not. 
@@ -89,14 +89,14 @@ It prints one piece of Hangman body graphics on each time user enters a wrong nu
 
 [Back to top](#hangman-game)
 
-* It displays a message of ```Thank you for playing!``` and ```See you next time.``` if user enters 'no'.
+* It displays a message of ```Thank you for playing!``` and ```See you next time``` if user enters 'no'.
 
 ![Winning message 2](screenshots/win-n.png)
 
 [Back to top](#hangman-game)
 
 ### Lost Game Screen
-* It displays a lost message if the user loses the game. It prints out the Hangman graphics. It asks user to play again or not. The game restarts if the answer is 'yes'. 
+* It displays a lost message if the user loses the game. It prints out the complete Hangman graphics. It asks user to play again or not. The game restarts if the answer is 'yes'. 
 
 ![Lost game 1](screenshots/lost-y.png)
 
@@ -147,7 +147,7 @@ The game is manually tested on the ***GitPod*** terminal and on the ***Heroku***
   *  The Game Info on the start screen tells user to follow the prompts to guess a number. There are questions for user to answer following one to another. User is able to find out how the game works.
 * As a game user, I want to know the game result.
   
-  * There is a different message displayed based on the user’s answer each time user answers a question or enters a number. It prints out a part of the Hangman body parts each time user enters a number. Therefore, user is able to find out the result.
+  * There are different messages displayed based on the user’s answer each time user answers a question or enters a number. It prints out a part of the Hangman body parts each time user guesses a wrong number. Therefore, user is able to find out the result.
 * As a game user, I want to be able to continuesly play the game as I wish.
   
   * The game restarts as long as user enters ‘yes’ whether user wins the game or loses the game. User is able to continue playing the game by guessing a number again. 
