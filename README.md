@@ -10,7 +10,7 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
 ## How To Play
 
-* This version of Hangman game is to guess a random number chosen by the computer. There is a welcoming message and the game info on the start screen. It asks user to decide if user would like to play or not. If the answer is ‘no’, then the program exits. Otherwise, the game starts.
+* The Hangman game is to guess a random number chosen by the computer. There is a welcoming message and the game info on the start screen. It asks user to decide if user would like to play or not. If the answer is ‘no’, then the program exits. Otherwise, the game starts.
 
 * It asks user’s name, then displays a greeting message to the user. Following it gives user a hint about guessing a number from the range of number between 0 and 50. 
 
@@ -44,34 +44,37 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
 The game is built using Python and runs in Heroku. The Hangman game is to guess a random number chosen by the computer between 0 and 50.
 
-
-* It displays a welcoming message, a human graphic, a set of game rules on the start screen. It asks user to decide if user would like to play or not. 
+### Start Screen
+  It displays a welcoming message, a human graphic, game info on the start screen. It asks user to decide if user would like to play or not. 
 
 ![Start screen](screenshots/start.png)
 
 [Back to top](#hangman-game)
 
-* The game exits if the user enters 'no'.
+### Exit Screen
+The game exits if the user enters 'no' when deciding not to play the game.
   
 ![Exit the game](screenshots/no.png)
 
 [Back to top](#hangman-game)
 
-* It asks for user's name afterwards if the user enters 'yes' and display a greeting message. Then it asks user to start guessing. It gives user hints about the range of numbers to be entered.
+### Greet User Screen
+It asks for user's name afterwards if the user enters 'yes' and display a greeting message. Then it asks user to start guessing. It gives user hints about the range of numbers to be entered.
 
 ![Get user's name](screenshots/yes.png)
 
 
 [Back to top](#hangman-game)
 
-* It displays an invalid message if user enters neither 'yes' nor 'no'.
+### Invalid Data Screen
+It displays an invalid message if user enters neither 'yes' nor 'no'.
 
 ![Invalid message](screenshots/invalid.png)
 
 [Back to top](#hangman-game)
 
-
-* It prints one piece of Hangman body graphics on each time user enters a wrong number that either the number is too big or too small.
+### Play Game Screen
+It prints one piece of Hangman body graphics on each time user enters a wrong number that either the number is too big or too small.
 
 ![Too small](screenshots/sml.png)
 
@@ -79,6 +82,7 @@ The game is built using Python and runs in Heroku. The Hangman game is to guess 
 
 [Back to top](#hangman-game)
 
+### Winning Game Screen
 * It displays a message of congratulatons if the user wins the game. and asks user if the user would like to play again or not. It the answer is 'yes', the game goes on.
 
 ![Winning message 1](screenshots/win-y.png)
@@ -91,7 +95,7 @@ The game is built using Python and runs in Heroku. The Hangman game is to guess 
 
 [Back to top](#hangman-game)
 
-
+### Lost Game Screen
 * It displays a lost message if the user loses the game. It prints out the Hangman graphics. It asks user to play again or not. The game restarts if the answer is 'yes'. 
 
 ![Lost game 1](screenshots/lost-y.png)
@@ -132,6 +136,25 @@ The game is manually tested on the ***GitPod*** terminal and on the ***Heroku***
 
 
 [Back to top](#hangman-game)
+
+### Testing User Stories
+
+* As a first time user, I want the game to be easily accessible.
+  
+  * User is able to access the game easily on different media screens as the program   is responsive on different screen sizes.
+* As a first time user, I want to know how to play the game.
+  
+  *  The Game Info on the start screen tells user to follow the prompts to guess a number. There are questions for user to answer following one to another. User is able to find out how the game works.
+* As a game user, I want to know the game result.
+  
+  * There is a different message displayed based on the user’s answer each time user answers a question or enters a number. It prints out a part of the Hangman body parts each time user enters a number. Therefore, user is able to find out the result.
+* As a game user, I want to be able to continuesly play the game as I wish.
+  
+  * The game restarts as long as user enters ‘yes’ whether user wins the game or loses the game. User is able to continue playing the game by guessing a number again. 
+
+
+[Back to top](#hangman-game)
+
 
 ### Resolved Bug
 

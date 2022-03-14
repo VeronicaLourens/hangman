@@ -278,6 +278,7 @@ def main():
     get_user_name()
     play_game()
     print_hangman(attempts)
+    # print_hangman()
 
 
 print()
