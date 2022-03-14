@@ -8,6 +8,9 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
 ![Hangman Game](screenshots/screens.png)
 
+
+
+
 ## How To Play
 
 * The Hangman game is to guess a random number chosen by the computer. There is a welcoming message and the game info on the start screen. It asks user to decide if user would like to play or not. If the answer is ‘no’, then the program exits. Otherwise, the game starts.
@@ -129,6 +132,15 @@ The code of the program is manually tested via [PEP8](http://pep8online.com/) an
 ![PEP8 final result](screenshots/pep8a.png)
 
 [Back to top](#hangman-game)
+
+### Input Testing
+
+I have tested the inputs during the project development. 
+
+* It displays ```Invalid data``` and ```Please enter 'yes' or 'no' ``` when user enters something neither 'yes' nor 'no'.
+  
+
+* It displays ```Invalid data``` and ```Please enter a number!``` when user enters letters rather than the numbers where it requires to enter a number.
 
 ### Testing on Heroku
 

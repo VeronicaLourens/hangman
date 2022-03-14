@@ -104,7 +104,7 @@ def play_game():
                 max_attempts -= 1
 
                 print(print_hangman(attempts))
-                continue
+
 
             elif user_answer < answer:
                 print()
@@ -168,6 +168,8 @@ def print_hangman(attempts):
     Prints one part of the body each time.
     """
 
+    spacer = '========='
+    
     if attempts == 0:
         print('\n*------*')
         print('       |')
@@ -175,7 +177,7 @@ def print_hangman(attempts):
         print('       |')
         print('       |')
         print('       |')
-        print('=========')
+        return spacer
 
     elif attempts == 1:
         print('\n*------*')
@@ -184,7 +186,7 @@ def print_hangman(attempts):
         print('       |')
         print('       |')
         print('       |')
-        print('========')
+        return spacer
 
     elif attempts == 2:
         print('\n*------*')
@@ -193,7 +195,7 @@ def print_hangman(attempts):
         print('       |')
         print('       |')
         print('       |')
-        print('========')
+        return spacer
 
     elif attempts == 3:
         print('\n*------*')
@@ -202,7 +204,7 @@ def print_hangman(attempts):
         print('   |   |')
         print('       |')
         print('       |')
-        print('========')
+        return spacer
 
     elif attempts == 4:
         print('\n*------*')
@@ -211,7 +213,7 @@ def print_hangman(attempts):
         print('  /|   |')
         print('       |')
         print('       |')
-        print('========')
+        return spacer
 
     elif attempts == 5:
         print('\n*------*')
@@ -220,7 +222,7 @@ def print_hangman(attempts):
         print('  /|\  |')
         print('       |')
         print('       |')
-        print('========')
+        return spacer
 
     elif attempts == 6:
         print('\n*------*')
@@ -229,7 +231,7 @@ def print_hangman(attempts):
         print('  /|\  |')
         print('  /    |')
         print('       |')
-        print('========')
+        return spacer
 
     elif attempts == 7:
         print('\n*------*')
@@ -278,7 +280,6 @@ def main():
     get_user_name()
     play_game()
     print_hangman(attempts)
-    # print_hangman()
 
 
 print()
@@ -299,3 +300,4 @@ print()
 
 
 main()
+ 
