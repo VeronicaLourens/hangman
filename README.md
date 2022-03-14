@@ -146,13 +146,12 @@ I have tested the inputs during the project development.
 
   ![Error1](screenshots/error1.png)
 
-### Play Game Testing
 
-I tested the game every time I wrote the functions during the project development in the ***Code Institute*** terminal template on Heroku. The program works well as intended.
+### Terminal Testing 
 
-### Testing on Heroku
+* I manually tested the program every time I wrote the functions during the project development in both the ***GitPod*** terminal and in the ***Code Institute*** terminal template in ***Heroku***. 
 
-The game is manually tested on the ***GitPod*** terminal and on the ***Heroku***. The program works well and confirms the error message when capturing invalid data.
+* The final program works well and confirms the error message when capturing invalid data. The game can be continuesly played without error.
 
 
 [Back to top](#hangman-game)

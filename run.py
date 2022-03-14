@@ -105,7 +105,6 @@ def play_game():
 
                 print(print_hangman(attempts))
 
-
             elif user_answer < answer:
                 print()
                 print(Fore.YELLOW + '  Your number is too small!')
