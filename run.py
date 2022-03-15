@@ -94,16 +94,16 @@ def play_game():
     attempts = 0
     max_attempts = 7
     is_playing = False
-
     answer = random.randint(0, 50)
+
     while not is_playing and max_attempts > 0:
 
-        number = range(0, 50)
+        # number_range = range(0, 50)
 
         print('  Please guess a number.')
         user_answer = input('  Between 0 and 50: ')
 
-        if user_answer in number and user_answer.isdigit():
+        if user_answer.isdigit():
             user_answer = int(user_answer)
             attempts += 1
 
@@ -142,7 +142,7 @@ def play_game():
                 print()
                 print(Fore.CYAN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
-                
+
                 while True:
                     print()
                     print()
@@ -169,28 +169,13 @@ def play_game():
                         print(Fore.LIGHTRED_EX + '  Invalid entry.')
                         print("  Please enter 'yes' or 'no'.")
                         print('===============================')
-                        # ask_user_to_play_or_not()
 
                 break
-        
-        # elif not user_answer.isdigit():
-        #     print()
-        #     print(Fore.LIGHTRED_EX + '  Invalid entry.')
-        #     print(Fore.YELLOW + '  Please enter only digit numbers.')
-        #     print('===================================')
-        #     print()
 
-        # elif int(user_answer) > 50 or int(user_answer) < 0:
+        # elif user_answer not in number_range:
         #     print()
         #     print(Fore.LIGHTRED_EX + '  Invalid entry.')
         #     print(Fore.BLUE + '  The number should be between 0 and 50.')
-        #     print('==========================================')
-        #     print()
-
-        # elif int(user_answer) < 0:
-        #     print()
-        #     print(Fore.LIGHTRED_EX + '  Invalid entry.')
-        #     print('  The number should be between 0 and 50.')
         #     print('==========================================')
         #     print()
   
