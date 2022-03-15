@@ -83,7 +83,7 @@ def get_user_name():
         return user_name
 
 
-def play_game(user_name):
+def play_game():
     """
     The function is to play the game.
     User guesses a number each time.
@@ -94,15 +94,16 @@ def play_game(user_name):
     attempts = 0
     max_attempts = 7
     is_playing = False
-    user_name = ''
 
     answer = random.randint(0, 50)
     while not is_playing and max_attempts > 0:
 
+        number = range(0, 50)
+
         print('  Please guess a number.')
         user_answer = input('  Between 0 and 50: ')
 
-        if user_answer.isdigit():
+        if user_answer in number and user_answer.isdigit():
             user_answer = int(user_answer)
             attempts += 1
 
@@ -150,7 +151,7 @@ def play_game(user_name):
 
                     if play_again.lower() == 'yes':
                         print()
-                        play_game(user_name)
+                        play_game()
 
                     elif play_again.lower() == 'no':
                         print()
@@ -172,47 +173,33 @@ def play_game(user_name):
 
                 break
         
-        elif not user_answer.isdigit():
-            print()
-            print(Fore.LIGHTRED_EX + '  Invalid entry.')
-            print('  Please enter only digit numbers.')
-            print('===================================')
-            print()
+        # elif not user_answer.isdigit():
+        #     print()
+        #     print(Fore.LIGHTRED_EX + '  Invalid entry.')
+        #     print(Fore.YELLOW + '  Please enter only digit numbers.')
+        #     print('===================================')
+        #     print()
 
-        elif user_answer > 50:
-            print()
-            print(Fore.LIGHTRED_EX + '  Invalid entry.')
-            print('  Please enter a number between 0 and 50.')
-            print('==========================================')
-            print()
+        # elif int(user_answer) > 50 or int(user_answer) < 0:
+        #     print()
+        #     print(Fore.LIGHTRED_EX + '  Invalid entry.')
+        #     print(Fore.BLUE + '  The number should be between 0 and 50.')
+        #     print('==========================================')
+        #     print()
+
+        # elif int(user_answer) < 0:
+        #     print()
+        #     print(Fore.LIGHTRED_EX + '  Invalid entry.')
+        #     print('  The number should be between 0 and 50.')
+        #     print('==========================================')
+        #     print()
   
         else:
             print()
             print(Fore.LIGHTRED_EX + '  Invalid entry.')
             print('  Please enter intergers between 0 and 50!')
-            print('===============================')
+            print('===========================================')
             print()
-
-
-def validate_user_answer():
-    """
-    "Validate user's answer.
-    """
-
-    user_answer = range(0, 50)
-
-    while not user_answer:
-
-        user_answer = int(user_answer)
-
-        if user_answer < 0:
-            print('Please enter a number bigger than 0.')
-
-        elif user_answer > 50:
-            print('Please enter a number smaller than 50.')
-
-        else:
-            play_game()
 
     
 def print_hangman(attempts):
@@ -313,7 +300,7 @@ def print_hangman(attempts):
             print()
             print()
             if play_again.lower() == 'yes':
-                play_game(user_name)
+                play_game()
 
             elif play_again.lower() == 'no':
                 print()
@@ -338,9 +325,8 @@ def main():
 
     attempts = 7
     ask_user_to_play_or_not()
-    user_name = get_user_name()
-    play_game(user_name)
-    validate_user_answer()
+    get_user_name()
+    play_game()
     print_hangman(attempts)
 
 
