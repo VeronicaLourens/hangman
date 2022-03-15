@@ -68,8 +68,15 @@ def get_user_name():
             print()
             print(Fore.GREEN + '  Nice to meet you  ' + user_name + '!')
             print()
-
             break
+
+        else:
+            print()
+            print(Fore.LIGHTRED_EX + '  Invalid entry.')
+            print('  Name can only be alphabets.')
+            print('===============================')
+            print()
+            continue
 
 
 def play_game():
