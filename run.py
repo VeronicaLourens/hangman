@@ -45,7 +45,7 @@ def ask_user_to_play_or_not():
 
         else:
             print()
-            print(Fore.LIGHTRED_EX + '  Invalid data.')
+            print(Fore.LIGHTRED_EX + '  Invalid entry.')
             print("  Please enter 'yes' or 'no'.")
             print(Fore.YELLOW + '===============================')
             print()
@@ -83,7 +83,7 @@ def get_user_name():
         return user_name
 
 
-def play_game():
+def play_game(user_name):
     """
     The function is to play the game.
     User guesses a number each time.
@@ -99,12 +99,12 @@ def play_game():
     answer = random.randint(0, 50)
     while not is_playing and max_attempts > 0:
 
-        attempts += 1
         print('  Please guess a number.')
         user_answer = input('  Between 0 and 50: ')
 
         if user_answer.isdigit():
             user_answer = int(user_answer)
+            attempts += 1
 
             if user_answer > answer:
                 print()
@@ -132,7 +132,7 @@ def play_game():
                 print()
                 print(Fore.CYAN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
-                print(Fore.LIGHTRED_EX + '   CONGRATULATIONS!' + user_name)
+                print(Fore.LIGHTRED_EX + '   CONGRATULATIONS!')
                 print()
                 print(Fore.LIGHTYELLOW_EX + '  You  WON  the  game!')
                 print()
@@ -150,7 +150,7 @@ def play_game():
 
                     if play_again.lower() == 'yes':
                         print()
-                        play_game()
+                        play_game(user_name)
 
                     elif play_again.lower() == 'no':
                         print()
@@ -163,13 +163,20 @@ def play_game():
                         print()
                         quit()
 
+                    else:
+                        print()
+                        print(Fore.LIGHTRED_EX + '  Invalid entry.')
+                        print("  Please enter 'yes' or 'no'.")
+                        print('===============================')
+                        # ask_user_to_play_or_not()
+
                 break
         
         elif not user_answer.isdigit():
             print()
             print(Fore.LIGHTRED_EX + '  Invalid entry.')
-            print('  Please enter only intergers.')
-            print('================================')
+            print('  Please enter only digit numbers.')
+            print('===================================')
             print()
 
         elif user_answer > 50:
@@ -182,11 +189,32 @@ def play_game():
         else:
             print()
             print(Fore.LIGHTRED_EX + '  Invalid entry.')
-            print(Fore.LIGHTYELLOW_EX + '  Please enter only intergers!')
+            print('  Please enter intergers between 0 and 50!')
             print('===============================')
             print()
 
 
+def validate_user_answer():
+    """
+    "Validate user's answer.
+    """
+
+    user_answer = range(0, 50)
+
+    while not user_answer:
+
+        user_answer = int(user_answer)
+
+        if user_answer < 0:
+            print('Please enter a number bigger than 0.')
+
+        elif user_answer > 50:
+            print('Please enter a number smaller than 50.')
+
+        else:
+            play_game()
+
+    
 def print_hangman(attempts):
     """
     The function is to print out the Hangman
@@ -285,7 +313,7 @@ def print_hangman(attempts):
             print()
             print()
             if play_again.lower() == 'yes':
-                play_game()
+                play_game(user_name)
 
             elif play_again.lower() == 'no':
                 print()
@@ -295,6 +323,13 @@ def print_hangman(attempts):
                 print()
                 quit()
 
+            else:
+                print()
+                print(Fore.LIGHTRED_EX + '  Invalid entry.')
+                print("  Please enter 'yes' or 'no'.")
+                print(Fore.YELLOW + '===============================')
+                print()
+
 
 def main():
     """
@@ -303,8 +338,9 @@ def main():
 
     attempts = 7
     ask_user_to_play_or_not()
-    get_user_name()
-    play_game()
+    user_name = get_user_name()
+    play_game(user_name)
+    validate_user_answer()
     print_hangman(attempts)
 
 
