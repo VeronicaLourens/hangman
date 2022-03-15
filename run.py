@@ -59,7 +59,9 @@ def get_user_name():
     Displays welcoming message to the user.
     """
 
-    while True:
+    name = False
+
+    while not name:
 
         user_name = input('  Please enter your name:  ')
 
@@ -78,6 +80,8 @@ def get_user_name():
             print()
             continue
 
+        return user_name
+
 
 def play_game():
     """
@@ -90,6 +94,7 @@ def play_game():
     attempts = 0
     max_attempts = 7
     is_playing = False
+    user_name = ''
 
     answer = random.randint(0, 50)
     while not is_playing and max_attempts > 0:
@@ -97,7 +102,7 @@ def play_game():
         attempts += 1
         print('  Please guess a number.')
         user_answer = input('  Between 0 and 50: ')
-        
+
         if user_answer.isdigit():
             user_answer = int(user_answer)
 
@@ -127,7 +132,7 @@ def play_game():
                 print()
                 print(Fore.CYAN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
-                print(Fore.LIGHTRED_EX + '   CONGRATULATIONS!')
+                print(Fore.LIGHTRED_EX + '   CONGRATULATIONS!' + user_name)
                 print()
                 print(Fore.LIGHTYELLOW_EX + '  You  WON  the  game!')
                 print()
@@ -136,7 +141,7 @@ def play_game():
                 print()
                 print(Fore.CYAN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
-
+                
                 while True:
                     print()
                     print()
@@ -159,11 +164,26 @@ def play_game():
                         quit()
 
                 break
+        
+        elif not user_answer.isdigit():
+            print()
+            print(Fore.LIGHTRED_EX + '  Invalid entry.')
+            print('  Please enter only intergers.')
+            print('================================')
+            print()
+
+        elif user_answer > 50:
+            print()
+            print(Fore.LIGHTRED_EX + '  Invalid entry.')
+            print('  Please enter a number between 0 and 50.')
+            print('==========================================')
+            print()
+  
         else:
             print()
-            print(Fore.LIGHTRED_EX + '  Invalid data.')
-            print('  Please enter a number!')
-            print('==========================')
+            print(Fore.LIGHTRED_EX + '  Invalid entry.')
+            print(Fore.LIGHTYELLOW_EX + '  Please enter only intergers!')
+            print('===============================')
             print()
 
 
