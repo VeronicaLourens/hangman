@@ -87,40 +87,32 @@ def handle_user_input():
     """
     To get and validate user's input.
     """
-    # user_input = False
-
-    # user_input = range(0, 50)
 
     while True:
 
-        user_input = input('Please guess a number: ')
+        print()
+        user_input = input('  Please guess a number between 0 and 50: ')
 
         if user_input.isdigit():
 
             user_input = int(user_input)
 
             if user_input > 50:
-                print('The number should be smaller than 50.')
+                print()
+                print(Fore.CYAN + '  The number should be smaller than 50.')
+                print('=========================================')
+                print()
                 continue
 
-            elif user_input <= 0:
-                print('The number should be above 0.')
-                continue
+        else:
+            print()
+            print()
+            print(Fore.LIGHTYELLOW_EX + '  Invalid data. Please try again!')
+            print('===================================')
+            print()
+            continue
 
-            print(user_input)
-
-            return user_input
-
-        print('The number must be between 1 and 50')
-
-
-# handle_user_input()
-        
-
-
-        
-
-
+        return user_input
 
 
 def play_game():
@@ -135,24 +127,15 @@ def play_game():
     max_attempts = 7
     is_playing = False
     answer = random.randint(0, 50)
-    # user_answer = range(0, 50)
 
     while not is_playing and max_attempts > 0:
 
-        # user_answer = range(0, 50)
+        user_answer = handle_user_input()
 
-        # number_range = range(0, 50)
+        user_answer = int(user_answer)
 
-        print('  Please guess a number.')
-        user_answer = input('  Between 0 and 50: ')
-        # user_answer = handle_user_input()
-
-        if user_answer.isdigit():
-            # user_answer range
-            # user_answer = range(0, 50)
-            user_answer = int(user_answer)
+        if user_answer <= 50:
             attempts += 1
-           
 
             if user_answer > answer:
                 print()
@@ -218,14 +201,6 @@ def play_game():
                         print('===============================')
 
                 break
-
-        # elif user_answer not in number_range:
-        #     print()
-        #     print(Fore.LIGHTRED_EX + '  Invalid entry.')
-        #     print(Fore.BLUE + '  The number should be between 0 and 50.')
-        #     print('==========================================')
-        #     print()
-  
         else:
             print()
             print(Fore.LIGHTRED_EX + '  Invalid entry.')
@@ -233,7 +208,7 @@ def play_game():
             print('===========================================')
             print()
 
-    
+
 def print_hangman(attempts):
     """
     The function is to print out the Hangman
@@ -358,8 +333,6 @@ def main():
     attempts = 7
     ask_user_to_play_or_not()
     get_user_name()
-    # validate_user_answer()
-    # handle_user_input()
     play_game()
     print_hangman(attempts)
 
