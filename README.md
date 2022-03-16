@@ -69,6 +69,14 @@ Table of Contents
 
  The purpose of the site is to provide an easy and fun guessing game for everyone to enjoy.
 
+ ### Data Model
+
+ #### Python Logic Flow Chart
+
+ The logic flow chart was created using ***Lucidchart*** to show the program's logics.
+
+ ![Flow chart](screenshots/lucidchart.png)
+
 ## Existing Features
 
 The game is built using Python and runs in Heroku. The Hangman game is to guess a random number chosen by the computer between 0 and 50. User has maximum 7 attempts to guess.
