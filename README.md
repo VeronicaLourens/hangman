@@ -142,10 +142,17 @@ It prints one piece of Hangman body graphics on each time user enters a wrong nu
 
 * [GitHub]() - to host the files and the content of the game.
 * [GitPod]() - to edit the code and push the code to GitHub page.
+* [GitBash]() - to commit and push the code to GitHub repo.
 * [Python]() - to create the code for the game's functionalities.
 * [Am I Responsive]() - to generate the site's responsiveness preview image on the top of the README file.
 * [Heroku]() - to deploy and run the Hangman game.
 * [PEP8 online]() - to validate the Python code.
+* [Python Random module]() - to generate a random interger using ```randint``` method.
+* [Python Colorama module]() - to color the text for the project.
+* [Lucidchart] - to create the flow chart.
+* [Chrome DevTools]() - to test the responsiveness.
+
+
 
 [Back to top](#hangman-game)
 
@@ -210,16 +217,6 @@ There were warnings about trailing whitespace during the code validation on ```P
 
 [Back to top](#hangman-game)
 
-
-## Libraries
-
-  ### Random
-
-  The ```random``` module was imported to generate a random interger between 0 and 50 using ```randint``` method.
-
-  ### Colorama
-
-  The```colorama``` module was imported to color the text for the project.
 
 ## Deployment
 
