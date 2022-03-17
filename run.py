@@ -174,8 +174,8 @@ def play_game():
                 print()
 
                 reset_game()
-
                 break
+
         else:
             print()
             print(Fore.LIGHTRED_EX + '  Invalid entry.')
@@ -189,7 +189,7 @@ def reset_game():
     The function is to reset the program.
     Goes back to the start screen.
     """
-    
+
     print()
     print()
     print('  Would you like to play again?')
@@ -226,7 +226,7 @@ def print_hangman(attempts):
     """
 
     spacer = '========='
-    
+
     if attempts == 0:
         print('\n*------*')
         print('       |')
@@ -363,4 +363,3 @@ def main():
 
 
 main()
- 
