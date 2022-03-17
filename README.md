@@ -111,13 +111,23 @@ It displays an invalid message if user enters neither 'yes' nor 'no'.
 [Back to top](#hangman-game)
 
 ### Play Game Screen
-It prints one piece of Hangman body graphics on each time user enters a wrong number that either the number is too big or too small.
+* It displays different hints to the user when entering different type of data. 
+* It prints one piece of Hangman body graphics on each time user enters a wrong number that either the number is too big or too small from the random number chosen by the computer. 
 
 ![Too small](screenshots/sml.png)
 
 ![Too big](screenshots/big.png)
 
 [Back to top](#hangman-game)
+
+* It displays an error message when user enters an invalid data that are not in the range of 0 and 50. In this case, it does not have any impact on the attempts allowed. It doesn't not print the parts of Hangman when user makes invalid entry.
+
+![Play game](screenshots/attmpts.png)
+
+
+
+[Back to top](#hangman-game)
+
 
 ### Winning Game Screen
 * It displays a message of congratulatons if the user wins the game. and asks user if the user would like to play again or not. It the answer is 'yes', the game goes on.
