@@ -173,32 +173,7 @@ def play_game():
                 print(Fore.CYAN + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
                 print()
 
-                while True:
-                    print()
-                    print()
-                    print('  Would you like to play again?')
-                    play_again = input("  Please enter 'yes' or 'no':  ")
-
-                    if play_again.lower() == 'yes':
-                        print()
-                        play_game()
-
-                    elif play_again.lower() == 'no':
-                        print()
-                        print()
-                        print(Fore.YELLOW + '  Thank you for playing!')
-                        print()
-                        print('  See you next time.')
-                        print()
-                        print(Fore.CYAN + '========================')
-                        print()
-                        quit()
-
-                    else:
-                        print()
-                        print(Fore.LIGHTRED_EX + '  Invalid entry.')
-                        print("  Please enter 'yes' or 'no'.")
-                        print('===============================')
+                reset_game()
 
                 break
         else:
@@ -207,6 +182,40 @@ def play_game():
             print('  Please enter integers between 0 and 50!')
             print('===========================================')
             print()
+
+
+def reset_game():
+    """
+    The function is to reset the program.
+    Goes back to the start screen.
+    """
+    
+    print()
+    print()
+    print('  Would you like to play again?')
+    play_again = input("  Please enter 'yes' or 'no':  ")
+
+    if play_again.lower() == 'yes':
+        print()
+        play_game()
+
+    elif play_again.lower() == 'no':
+        print()
+        print()
+        print(Fore.YELLOW + '  Thank you for playing!')
+        print()
+        print('  See you next time.')
+        print()
+        print(Fore.CYAN + '========================')
+        print()
+
+        main()
+
+    else:
+        print()
+        print(Fore.LIGHTRED_EX + '  Invalid entry.')
+        print("  Please enter 'yes' or 'no'.")
+        print('===============================')
 
 
 def print_hangman(attempts):
@@ -330,28 +339,27 @@ def main():
     The function is to call all of the functions.
     """
 
+    print()
+    print(Fore.LIGHTMAGENTA_EX + '************************************')
+    print()
+    print(Style.BRIGHT + '     WELCOME TO HANGMAN GAME!')
+    print()
+    print(Fore. LIGHTMAGENTA_EX + '************************************')
+    print('\n*-----*   Game Info:')
+    print('  |  |')
+    print(Fore.LIGHTYELLOW_EX + '  O  |  Follow the prompts.')
+    print(Fore.LIGHTRED_EX + ' /|\ |  Guess a number.')
+    print(Fore.LIGHTYELLOW_EX + ' / \ |  Maximum 7 attempts.')
+    print('     |')
+    print('======  Happy playing!')
+    print()
+    print()
+
     attempts = 7
     ask_user_to_play_or_not()
     get_user_name()
     play_game()
     print_hangman(attempts)
-
-
-print()
-print(Fore.LIGHTMAGENTA_EX + '************************************')
-print()
-print(Style.BRIGHT + '     WELCOME TO HANGMAN GAME!')
-print()
-print(Fore. LIGHTMAGENTA_EX + '************************************')
-print('\n*-----*   Game Info:')
-print('  |  |')
-print(Fore.LIGHTYELLOW_EX + '  O  |  Follow the prompts.')
-print(Fore.LIGHTRED_EX + ' /|\ |  Guess a number.')
-print(Fore.LIGHTYELLOW_EX + ' / \ |  Maximum 7 attempts.')
-print('     |')
-print('======  Happy playing!')
-print()
-print()
 
 
 main()
