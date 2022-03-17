@@ -23,6 +23,7 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
     - [Play Game Screen](#play-game-screen)
     - [Winning Game Screen](#winning-game-screen)
     - [Lost Game Screen](#lost-game-screen)
+    - [Future Features](#future-features)
   - [Technologies Used](#technologies-used)
   - [Testing](#testing)
     - [PEP8 online code validation](#pep8-online-code-validation)
@@ -144,6 +145,11 @@ It prints one piece of Hangman body graphics on each time user enters a wrong nu
 
 
 [Back to top](#hangman-game)
+
+### Future Features
+
+* Create a function to load the application with larger Hangman graphic.
+* An option to create the Python application for guessing a random word.
 
 ## Technologies Used
 
