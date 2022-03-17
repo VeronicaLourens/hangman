@@ -84,21 +84,21 @@ The game is built using Python and runs in Heroku. The Hangman game is to guess 
 ### Start Screen
   It displays a welcoming message, a human graphic, game info on the start screen. It asks user to decide if user would like to play or not. 
 
-![Start screen](screenshots/start.png)
+  ![Start screen](screenshots/start.png)
 
 [Back to top](#hangman-game)
 
 ### Exit Screen
 The game exits if the user enters 'no' when deciding not to play the game.
   
-![Exit the game](screenshots/no.png)
+  ![Exit the game](screenshots/no.png)
 
 [Back to top](#hangman-game)
 
 ### Greet User Screen
 It asks for user's name afterwards if the user enters 'yes' and display a greeting message. Then it asks user to start guessing. It gives user hints about the range of numbers to be entered.
 
-![Get user's name](screenshots/yes.png)
+  ![Get user's name](screenshots/yes.png)
 
 
 [Back to top](#hangman-game)
@@ -106,7 +106,7 @@ It asks for user's name afterwards if the user enters 'yes' and display a greeti
 ### Invalid Data Screen
 It displays an invalid message if user enters neither 'yes' nor 'no'.
 
-![Invalid message](screenshots/invalid.png)
+  ![Invalid message](screenshots/invalid.png)
 
 [Back to top](#hangman-game)
 
@@ -114,15 +114,15 @@ It displays an invalid message if user enters neither 'yes' nor 'no'.
 * It displays different hints to the user when entering different type of data. 
 * It prints one piece of Hangman body graphics on each time user enters a wrong number that either the number is too big or too small from the random number chosen by the computer. 
 
-![Too small](screenshots/sml.png)
+  ![Too small](screenshots/sml.png)
 
-![Too big](screenshots/big.png)
+  ![Too big](screenshots/big.png)
 
 [Back to top](#hangman-game)
 
 * It displays an error message when user enters an invalid data that are not in the range of 0 and 50. In this case, it does not have any impact on the attempts allowed. It doesn't not print the parts of Hangman when user makes invalid entry.
 
-![Play game](screenshots/attmpts.png)
+  ![Play game](screenshots/attmpts.png)
 
 
 
@@ -132,26 +132,26 @@ It displays an invalid message if user enters neither 'yes' nor 'no'.
 ### Winning Game Screen
 * It displays a message of congratulatons if the user wins the game. and asks user if the user would like to play again or not. It the answer is 'yes', the game goes on.
 
-![Winning message 1](screenshots/win-y.png)
+  ![Winning message 1](screenshots/win-y.png)
 
 [Back to top](#hangman-game)
 
-* It displays a message of ```Thank you for playing!``` and ```See you next time``` if user enters 'no'.
+* It displays a message of ```Thank you for playing!``` and ```See you next time``` if user enters 'no', then it goes back to the start screen.
 
-![Winning message 2](screenshots/win-n.png)
+  ![Winning message 2](screenshots/win-n.png)
 
 [Back to top](#hangman-game)
 
 ### Lost Game Screen
 * It displays a lost message if the user loses the game. It prints out the complete Hangman graphics. It asks user to play again or not. The game restarts if the answer is 'yes'. 
 
-![Lost game 1](screenshots/lost-y.png)
+  ![Lost game 1](screenshots/lost-y.png)
 
 [Back to top](#hangman-game)
 
 * The game exits if the answser is 'no'.
 
-![Lost game 2](screenshots/lost-n.png)
+  ![Lost game 2](screenshots/lost-n.png)
 
 
 [Back to top](#hangman-game)
@@ -185,7 +185,7 @@ It displays an invalid message if user enters neither 'yes' nor 'no'.
 
 The code of the program is manually tested via [PEP8](http://pep8online.com/) and no errors found.
 
-![PEP8 final result](screenshots/pep8a.png)
+  ![PEP8 final result](screenshots/pep8a.png)
 
 [Back to top](#hangman-game)
 
@@ -245,7 +245,7 @@ I have manually tested the inputs throughout the project development.
 
 There were warnings about trailing whitespace during the code validation on ```PEP8 online```. I got a great tip on the ```Slack``` community and delete the whitespace using the ```Backspace``` key.
 
-![PEP8 first result](screenshots/pep8.png)
+  ![PEP8 first result](screenshots/pep8.png)
 
 
 [Back to top](#hangman-game)
@@ -259,7 +259,7 @@ There were warnings about trailing whitespace during the code validation on ```P
   
   2. Go to the ```Settings``` tab afterwards, click ```Add buildpack``` button on the right side of the ```Buildpacks section```, first select ```python``` and add it, then select ```nodejs``` and add it.
 
-![Heroku](screenshots/heroku.jpg)
+  ![Heroku](screenshots/heroku.jpg)
 
 [Back to top](#hangman-game)
 
@@ -268,8 +268,7 @@ There were warnings about trailing whitespace during the code validation on ```P
   4. In the ```Manual deploy```section, seclect ```main``` and then click ```Deploy Branch``` button, the app was successfully deployed after a while. 
   5. Click the ```View``` button on the bottom of the page or the ```Open app``` button on the top right corner to view the programme.
 
-![Deployment](screenshots/deploy.jpg)
-
+  ![Deployment](screenshots/deploy.jpg)
 
 
 [Back to top](#hangman-game)
