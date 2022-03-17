@@ -8,11 +8,13 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
 
 ![Hangman Game](screenshots/screens.png)
 
-Table of Contents
+# Table of Contents
   - [How To Play](#how-to-play)
   - [User Experience UX](#user-experience-ux)
     - [User Stories](#user-stories)
     - [Site Owner Stories](#site-owner-stories)
+    - [Data Model](#data-model)
+      - [Python Logic Flow Chart](#python-logic-flow-chart)
   - [Existing Features](#existing-features)
     - [Start Screen](#start-screen)
     - [Exit Screen](#exit-screen)
@@ -28,14 +30,10 @@ Table of Contents
     - [Terminal Testing](#terminal-testing)
     - [Testing User Stories](#testing-user-stories)
     - [Resolved Bug](#resolved-bug)
-  - [Libraries](#libraries)
-    - [Random](#random)
-    - [Colorama](#colorama)
   - [Deployment](#deployment)
     - [Deploy the project to Heroku](#deploy-the-project-to-heroku)
   - [Credit](#credit)
   - [Acknowledgement](#acknowledgement)
-
 
 ## How To Play
 
@@ -50,7 +48,6 @@ Table of Contents
 * It asks user if user would like to play again after both win or lost the game. If user’s answer is ‘no’, then the program exits. If user’s answer is ‘yes’, then user can continue playing the game.
 
 [Back to top](#hangman-game)
-
 
 
 ## User Experience UX
@@ -76,6 +73,8 @@ Table of Contents
  The logic flow chart was created using ***Lucidchart*** to show the program's logics.
 
  ![Flow chart](screenshots/lucidchart.png)
+
+ [Back to top](#hangman-game)
 
 ## Existing Features
 
@@ -181,15 +180,21 @@ I have tested the inputs during the project development.
 * It displays error message when user enters something neither 'yes' nor 'no'.
   
   ![Error2](screenshots/error2.png)
+
+[Back to top](#hangman-game)
   
 
 * It displays error message when user enters anything else rather than the numbers where it requires to enter a number. The special symbols, letters, whitespace, numbers smaller than 0 or bigger than 50, decimal numbers are all invalid entry.
 
   ![Error1](screenshots/numerror.png)
 
+[Back to top](#hangman-game)
+
 * It displays error message when user enters numbers, symbols, whitespace rather than letters for the user's name.
 
   ![Name error](screenshots/nameerror.png)
+
+[Back to top](#hangman-game)
 
 
 ### Terminal Testing 
