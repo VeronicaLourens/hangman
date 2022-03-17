@@ -156,7 +156,7 @@ It prints one piece of Hangman body graphics on each time user enters a wrong nu
 * [PEP8 online]() - to validate the Python code.
 * [Python Random module]() - to generate a random interger using ```randint``` method.
 * [Python Colorama module]() - to color the text for the project.
-* [Lucidchart] - to create the flow chart.
+* [Lucidchart]() - to create the flow chart.
 * [Chrome DevTools]() - to test the responsiveness.
 
 
@@ -175,7 +175,7 @@ The code of the program is manually tested via [PEP8](http://pep8online.com/) an
 
 ### Input Testing
 
-I have tested the inputs during the project development. 
+I have manually tested the inputs throughout the project development. 
 
 * It displays error message when user enters something neither 'yes' nor 'no'.
   
