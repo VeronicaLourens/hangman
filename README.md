@@ -178,16 +178,16 @@ The code of the program is manually tested via [PEP8](http://pep8online.com/) an
 
 I have tested the inputs during the project development. 
 
-* It displays ```Invalid entry``` and ```Please enter 'yes' or 'no' ``` when user enters something neither 'yes' nor 'no'.
+* It displays error message when user enters something neither 'yes' nor 'no'.
   
   ![Error2](screenshots/error2.png)
   
 
-* It displays ```Invalid entry``` when user enters anything else rather than the numbers where it requires to enter a number.
+* It displays error message when user enters anything else rather than the numbers where it requires to enter a number. The special symbols, letters, whitespace, numbers smaller than 0 or bigger than 50, decimal numbers are all invalid entry.
 
   ![Error1](screenshots/numerror.png)
 
-* It displays error message when user enters invalid date for user's name.
+* It displays error message when user enters numbers, symbols, whitespace rather than letters for the user's name.
 
   ![Name error](screenshots/nameerror.png)
 

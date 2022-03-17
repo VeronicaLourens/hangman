@@ -75,7 +75,7 @@ def get_user_name():
         else:
             print()
             print(Fore.LIGHTRED_EX + '  Invalid entry.')
-            print('  Name can only be alphabets.')
+            print('  Name can only be letters.')
             print('===============================')
             print()
             continue
@@ -99,7 +99,7 @@ def handle_user_input():
 
             if user_input > 50:
                 print()
-                print(Fore.CYAN + '  The number should be smaller than 50.')
+                print(Fore.RED + '  The number should be smaller than 50.')
                 print('=========================================')
                 print()
                 continue
