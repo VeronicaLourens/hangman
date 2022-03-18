@@ -38,6 +38,7 @@ def ask_user_to_play_or_not():
             print()
             print()
             print(Fore.LIGHTGREEN_EX + '  Thank you for stopping by.')
+            print()
             print('  Have a great day! Bye-bye!')
             print(Fore.LIGHTGREEN_EX + '==============================')
             print()
