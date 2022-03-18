@@ -200,7 +200,7 @@ def reset_game():
         print()
 
         # Call the play game function to play again.
-       
+
         play_game()
 
     elif play_again.lower() == 'no':
@@ -213,10 +213,7 @@ def reset_game():
         print(Fore.CYAN + '========================')
         print()
 
-        # Call the main function to exit the program.
-        # And go back to the start screen.
-
-        main()
+        quit()
 
     else:
         print()
@@ -333,10 +330,7 @@ def print_hangman(attempts):
                 print(Fore.LIGHTYELLOW_EX + '  See you next time!')
                 print()
 
-            # Call the main function to exit the program.
-            # And go back to the start screen.
-
-                main()
+                quit()
 
             else:
                 print()
