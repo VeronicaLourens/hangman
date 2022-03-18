@@ -279,7 +279,7 @@ There were warnings about trailing whitespace during the code validation on ```P
 
 * Whilst I have tried to deviate as much as possible, there might be some similarities in the code as the project was influenced by the code along Love Sandwiches project at [Code Institute]().
 
-* I relied upon the support from Code Institue [online tutors](),  mentor [Precious Ijege](),  project lead [David Bowers](), Slack community and my families. Great thanks to all those who support my learning journey. 
+* I relied upon the support from Code Institue [online tutors](),  mentor [Precious Ijege](),  project lead [David Bowers](), Slack community and my families. In the project's final stage, [Jack Conroy]() gave me great tips for solving the last problem and re-arranging my code in a better practice. Great thanks to all of those who support my learning journey. 
   
 * I use W3schools, YouTube and stack overflow for general references throughout the project. I watched the tutorial videos on Youtube to gain extra knowledge about Python.
 
