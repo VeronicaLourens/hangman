@@ -224,6 +224,8 @@ I have manually tested the program on the following browsers. The program's appe
 * ***Safari***
 * ***Firefox***
 
+[Back to top](#hangman-game)
+
 ### Testing User Stories
 
 * As a first time user, I want the game to be easily accessible.

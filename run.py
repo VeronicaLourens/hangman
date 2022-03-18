@@ -313,32 +313,7 @@ def print_hangman(attempts):
         print(Fore.LIGHTCYAN_EX + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
         print()
 
-        while True:
-
-            print()
-            print('   Would you like to play again?')
-            play_again = input("   Please enter 'yes' or 'no':  ")
-            print()
-            print()
-
-            if play_again.lower() == 'yes':
-                play_game()
-
-            elif play_again.lower() == 'no':
-                print()
-                print(Fore.LIGHTMAGENTA_EX + '  Thank you for playing!')
-                print()
-                print(Fore.LIGHTYELLOW_EX + '  See you next time!')
-                print()
-
-                quit()
-
-            else:
-                print()
-                print(Fore.LIGHTRED_EX + '  Invalid entry.')
-                print("  Please enter 'yes' or 'no'.")
-                print(Fore.YELLOW + '===============================')
-                print()
+        reset_game()
 
 
 def main():
