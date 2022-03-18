@@ -316,6 +316,7 @@ def print_hangman(attempts):
             play_again = input("   Please enter 'yes' or 'no':  ")
             print()
             print()
+
             if play_again.lower() == 'yes':
                 play_game()
 

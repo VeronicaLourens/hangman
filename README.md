@@ -103,13 +103,6 @@ It asks for user's name afterwards if the user enters 'yes' and display a greeti
 
 [Back to top](#hangman-game)
 
-### Invalid Data Screen
-It displays an invalid message if user enters neither 'yes' nor 'no'.
-
-  ![Invalid message](screenshots/invalid.png)
-
-[Back to top](#hangman-game)
-
 ### Play Game Screen
 * It displays different hints to the user when entering different type of data. 
 * It prints one piece of Hangman body graphics on each time user enters a wrong number that either the number is too big or too small from the random number chosen by the computer. 
@@ -120,7 +113,7 @@ It displays an invalid message if user enters neither 'yes' nor 'no'.
 
 [Back to top](#hangman-game)
 
-* It displays an error message when user enters an invalid data that are not in the range of 0 and 50. In this case, it does not have any impact on the attempts allowed. It doesn't not print the parts of Hangman when user makes invalid entry.
+* It displays an error message when user enters an invalid data that are not in the range of 0 and 50. In this case, it does not have any impact on the attempts allowed. It does not print the parts of Hangman when user makes invalid entry.
 
   ![Play game](screenshots/attmpts.png)
 
