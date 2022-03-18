@@ -41,7 +41,8 @@ def ask_user_to_play_or_not():
             print('  Have a great day! Bye-bye!')
             print(Fore.LIGHTGREEN_EX + '==============================')
             print()
-            quit()
+
+            main()
 
         else:
             print()
@@ -324,7 +325,8 @@ def print_hangman(attempts):
                 print()
                 print(Fore.LIGHTYELLOW_EX + '  See you next time!')
                 print()
-                quit()
+
+                main()
 
             else:
                 print()
