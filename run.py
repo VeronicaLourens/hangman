@@ -36,16 +36,13 @@ def ask_user_to_play_or_not():
 
         elif user_choice.lower() == 'no':
             print()
-            print(Fore.LIGHTGREEN_EX + '  Thank you for stopping by.')
             print()
+            print(Fore.LIGHTGREEN_EX + '  Thank you for stopping by.')
             print('  Have a great day! Bye-bye!')
             print(Fore.LIGHTGREEN_EX + '==============================')
             print()
 
-            # Call the main function to exit the program.
-            # And go back to the start screen.
-
-            main()
+            quit()
 
         else:
             print()
