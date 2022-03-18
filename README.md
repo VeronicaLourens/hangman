@@ -28,6 +28,7 @@ Click here to view the live site [Hangman Game](https://vl-pp3.herokuapp.com/)
     - [PEP8 online code validation](#pep8-online-code-validation)
     - [Input Testing](#input-testing)
     - [Terminal Testing](#terminal-testing)
+    - [Browser Compatibility Testing](#browser-compatibility-testing)
     - [Testing User Stories](#testing-user-stories)
     - [Resolved Bug](#resolved-bug)
   - [Deployment](#deployment)
@@ -213,6 +214,15 @@ I have manually tested the inputs throughout the project development.
 
 
 [Back to top](#hangman-game)
+
+### Browser Compatibility Testing
+
+I have manually tested the program on the following browsers. The program's appearence looks good and the program's functionality is fine with no issues with all of the following browsers.
+
+* ***Google Chrome***
+* ***Microsoft Edge***
+* ***Safari***
+* ***Firefox***
 
 ### Testing User Stories
 
