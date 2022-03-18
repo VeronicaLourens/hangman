@@ -319,6 +319,7 @@ def print_hangman(attempts):
 def main():
     """
     The function is to call all of the functions.
+    Prints the text and Hangman graphics for the start screen.
     """
 
     print()
